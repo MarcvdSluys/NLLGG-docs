@@ -1,0 +1,138 @@
+# Created 2020-12-23 Wed 19:43
+#+title: Het gebruik van closed-source software door overheden
+#+author: Marc van der Sluys
+
+Ik maak me zorgen over het gebruik van commerciële/closed-source software door onze overheden.  Directe
+aanleiding waren drie artikelen in de Volkskrant die week, over de Gemeente Hof van Twente die wordt gegijzeld
+(losgeld van belastinggeld en privacygevoelige data van inwoners in handen van criminelen) en het feit dat het
+ministerie van Buitenlandse Zaken onze staatsgeheimen op Windowscomputers bewaart:
+
+1. 'Hello, need data back? Contact us fast.' Hackers eisen geld van gemeente Hof van Twente (7/12):
+   https://www.volkskrant.nl/nieuws-achtergrond/hello-need-data-back-contact-us-fast-hackers-eisen-geld-van-gemeente-hof-van-twente~b6c46cff/
+
+2. 'We vertrouwen elkaar toch?' Hoe Buitenlandse Zaken staatsgeheimen al jaren niet goed beveiligt: (11/12)
+   https://www.volkskrant.nl/nieuws-achtergrond/we-vertrouwen-elkaar-toch-hoe-buitenlandse-zaken-staatsgeheimen-al-jaren-niet-goed-beveiligt~b4b8c3b6/
+
+3. Informatie over lekken in computernetwerken wordt niet goed gedeeld (12/12):
+   https://www.volkskrant.nl/nieuws-achtergrond/informatie-over-lekken-in-computernetwerken-wordt-niet-goed-gedeeld~bbd6160b/
+
+
+Als reactie op ieder van drie de artikelen heb ik een lezerbrief geschreven (zie hieronder), die echter niet
+werden geplaatst.  Daarnaast heb ik de auteurs van de stukken een tweet gestuurd.
+
+De strekking van mijn boodschappen is ruwweg als volgt:
+
+1. Hof van Twente is gehackt via het Remote Desktop Protocol van Microsoft Windows.  Waarom wordt in het
+   artikel niet genoemd dat alleen gebruikers van dit systeem zich zorgen hoeven maken?
+
+2. Microsoft maakt commerciële software.  Het doel ervan is zoveel mogelijk geld verdienen met een stukje
+   software van een bepaalde kwaliteit.  Met andere woorden, zo min mogelijk kwaliteit leveren per euro.  Had
+   het Hof van Twente niet kunnen weten van dit 'feature' van MS Windows en heeft het de hack niet over
+   zichzelf uitgeroepen?
+
+3. Microsoft heeft mogelijk banden met de NSA.  Dit soort banden haalt regelmatig het nieuws als b.v. Apple
+   *niet* ingaat op de verzoeken van de NSA.  Doordat Microsoft gesloten software maakt, is niet duidelijk wat
+   er met de data van de gebruikers van deze software gebeurt.
+
+4. We horen vaak over de macht van techbedrijven als Google en Facebook.  Hoe komt het dat Microsoft daar niet
+   bij wordt genoemd.  Google en Facebook hebben alleen toegang tot gegevens die we met hen delen.  Microsoft
+   heeft toegang tot alle gegevens op een PC waarop het OS draait!
+
+5. Er bestaan alternatieven voor commerciële, closed-source software: free open-source software (FOSS).  Vaak
+   gemaakt door whizzkids die behoefte hebben aan een stuk software dat nog niet bestaat, bestaat maar van
+   onvoldoende kwaliteit is of bestaat maar waarvan niet duidelijk is wat het precies allemaal doet.  Zo'n
+   persoon deelt de software met de rest van de wereld zodat er meer mensen kunnen profiteren, maar ook zodat
+   er feedback kan worden gegeven door (duizenden) gebruikers, waardoor de (eigen) software wordt
+   verbeterd. Doordat de bron beschikbaar is kan iedere deskundige exact zien wat de software doet.  Doordat
+   duizenden mensen meekijken worden fouten snel ontdekt en vaak binnen uren tot dagen verholpen.  Hierdoor
+   wordt de software van betere kwaliteit, "lichter", sneller, stabieler en veiliger.  Daarnaast is de
+   software goedkoop (gratis!).
+
+6. Overheden zouden *niet* (*nooit!*) met commerciële, gesloten software moeten werken.  Ten eerste zijn de
+   systemen vitaal en moeten ze stabiel en snel zijn.  Daarnaast zijn de gegevens geheim (privacy,
+   staatsgeheim) en moeten de systemen dus veilig zijn.  Een open-source-oplossing ligt dus het meest voor de
+   hand.
+
+7. Ik ben niet de enige die dit vindt.  De EU Open source software strategy 2020-2023 pleit ook voor open
+   source voor gebruik in de EU:
+   https://ec.europa.eu/info/departments/informatics/open-source-software-strategy_en.  Dit is niet alleen
+   vanwege de genoemde voordelen van FOSS, ook opbouwen en behouden van kennis en kunde binnen de EU speelt
+   een belangrijke rol.
+
+8. Het gebruik van FOSS is niet helemaal gratis.  Net als bij commerciële software moet deze worden
+   geïnstalleerd en moeten systemen worden geconfigureerd.  Een voordeel van FOSS is dat dit door mensen uit
+   de regio kan gebeuren.  Het geld voor systeembeheer kan dus worden besteed aan lokale ICT-ers, in plaats
+   van dit over te maken naar een commercieel bedrijf in de V.S.  Zeker overheden zouden moeten kiezen voor
+   lokale investeringen van belastinggeld.
+
+9. Een ander voordeel van FOSS is de flexibiliteit.  Ooit software gekocht die bijna doet wat je wilt?  Bij
+   FOSS (bespaar je op de aanschafkosten en) kun je de gewenste functionaliteit zelf toevoegen (m.b.v. een
+   lokale ICT-er), doordat de broncode beschikbaar is.
+
+Ik vermoed dat mijn ongeplaatste brieven meer impact hebben dan je op eerste gezicht zou denken.  Vaak worden
+ze doorgestuurd naar de auteur van het betreffende artikel.  Daarnaast kan de brief met dezelfde strekking
+maar van een andere schrijver worden gekozen voor publicatie juist *omdat* er meerdere brieven waren.  De
+tweets aan journalisten komen direct aan worden gelezen.  Ik ben ook voornemens om een raadslid uit de
+gemeente waar ik woon een email te schrijven met mijn zorgen over het Hof van Twente en de vraag of onze
+gemeente ook privacygevoelige informatie toevertrouwt aan MS Windows.
+
+Maar alleen ben ik een roepende in de woestijn (even los van de EU).  Vandaar mijn lidmaatschap van de
+NLLGG. Wellicht zijn er andere mensen met vergelijkbare zorgen.  We kunnen brieven aan kranten en politici
+delen (de NLLGG-website noemt open brieven aan politici specifiek); eenmaal schrijven en naar verschillende
+kranten, gemeenten en politici sturen.  Een voorraad informatie opbouwen online die gerecycled kan worden voor
+het volgende incident.  Ik heb vaker brieven naar de krant gestuurd die pas in een latere incarnatie werd
+gepubliceerd.  Ik kan me voorstellen dat dit soort boodschappen beginnen door/aan te komen wanneer ze vaker en
+op meer plaatsen worden aangeboden.
+
+Vandaar mijn vraag: zijn er mensen die deze zorgen delen en die hier iets aan zouden willen doen?  Ik geef een
+paar voorbeelden van actiepunten, maar mogelijk zijn er meer en/of betere mogelijkheden.  Ik hoor het graag.
+
+
+Met vriendelijke groet,
+
+Marc van der Sluys.
+
+
+
+* Brieven aan de Volkskrant
+
+** Open-sourcesoftware [2020-12-07 Mon]
+
+De Gemeente Hof van Twente is gehackt via het Remote Desktop Protocol van Microsoft.  Dat bedrijf maakt
+commerciële software, met als doel zoveel mogelijk geld te verdienen per eenheid kwaliteit, m.a.w. zo min
+mogelijk kwaliteit te leveren per euro.  Het is schrikbarend dat (Nederlandse) overheden dit type product
+gebruiken (los van eventuele banden met de NSA).  Denk eens aan het alternatief: open-sourcesoftware, vaak
+gemaakt door een club whizzkids die kwalitatief zo goed mogelijke software maken voor eigen gebruik en die
+vervolgens gratis met de wereld delen (zoveel mogelijk kwaliteit per euro).  Natuurlijk zijn er kosten
+verbonden aan het opzetten van zo'n open-sourcesysteem.  Maar ik zou als overheid dat geld liever besteden aan
+lokale ICT-ers dan overmaken naar Richmond.
+
+Marc van der Sluys.
+
+
+** Microsoft Windows [2020-12-11 Fri]
+
+Op maandag lees ik in de Volkskrant hoe de Gemeente Hof van Twente is gehackt via het Remote Desktop Protocol
+van Microsoft Windows.  Op vrijdag meldt de krant dat het Ministerie van Buitenlandse Zaken gebruik maakt van
+datzelfde onveilige besturingssysteem.  Onze staatsgeheimen worden blijkbaar beheerd door software van een
+commercieel Amerikaans bedrijf met mogelijke banden met de NSA.  Waarom gebruiken onze overheden geen open
+besturingssystemen, zoals Linux?  Die zijn sneller, stabieler en veiliger, en het beheer heb je geheel in
+eigen hand doordat de broncode beschikbaar is.  Met de kosten van dat beheer kan de overheid aan lokale
+ICT-ers werk verschaffen, in plaats van het geld over te maken naar de VS.  Hiermee investeert zij dus ook nog
+eens in de Nederlandse kenniseconomie.
+
+Marc van der Sluys.
+
+
+** Hof van Twente [2020-12-12 Sat]
+
+Informatie van het Nationaal Cyber Security Center (NCSC) over kwetsbaarheden van computersystemen hebben de
+gemeente Hof van Twente niet bereikt, waardoor hun systemen konden worden gehackt via Microsofts Remote
+Desktop Protocol (Ten Eerste, 12 december).  Deze test is echter simpel zelf te doen: draait Windows op je PC
+en is deze verbonden met het internet?  Dan loop je dit risico, net als die andere 100.000 computers in
+Nederland.  Gelukkig zijn er veilige (gratis!) alternatieven voor Windows, zoals Linux.  Downloaden,
+installeren en je pc of laptop wordt sneller, stabieler en veiliger.  Dit is ook een reden waarom de EU
+alternatieven voor commerciële software adviseert in haar Open source software strategy 2020-2023.  Lokale en
+nationale overheden zouden hier als eerste gehoor aan moeten geven, voor onze privacy en veiligheid.
+
+Marc van der Sluys.
