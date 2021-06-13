@@ -1,0 +1,23 @@
+# Created 2021-06-13 Sun 10:57
+#+title: Ongedierte
+#+author: Marc van der Sluys
+
+Ik typ deze tekst, het zal u niet verrassen, op een toetsenbord.  Dat vind ik handig.  Ik weet wat ik wil schrijven en ik hoef alleen maar de juiste knoppen in te drukken om dat voor elkaar te krijgen.  Ik kan niet bijzonder snel typen, maar mijn vingers (of ruggenmerg) weten waar de gewenste toetsen te vinden zijn, zodat er geen trage communicatie met mijn hersens nodig is vóór het indrukken van iedere toets.
+
+Natuurlijk heb ik niet zomaar kunnen beginnen met typen - ik moest eerst een tekstbestand openen.  Ctrl-Alt-T opent een terminal, "nllgg Enter" (een alias) springt naar mijn NLLGG-directory, "cd Columns" (eigenlijk "cd C Tab") brengt me in de uiteindelijke directory en "emacs 2021-06__Ongedierte.txt" opent de file waarin ik dit schrijf.  Ctrl-X Ctrl-S slaat deze tekst op.
+
+Natuurlijk had ik ook mijn muis kunnen zoeken en wapperen om het pijltje te vinden, dat naar de K van KDE linksonder in het scherm kunnen bewegen en te klikken, en vervolgens de knoppen Applications > Office > scroll omlaag, scroll omhoog, oh nee, misschien toch Applications > Utilities > scroll omlaag > Kwrite kunnen klikken om een grafische editor te openen.  Om de file de eerste keer op te slaan moet ik dan weer muis en pijltje vinden, klikken op File > Save As > Dir > Subdir > NLLGG > Columns en uiteindelijk op de knop Save drukken.  Maar ja, dan heb ik een muis nodig.  En muizen zijn ongedierte.
+
+Mijn ruggengraat weet niet waar mijn muis woont, waar de pointer is, waar de woorden File en Save As staan, et cetera, en dus moet ik die zoeken, lezen en interpreteren.  Mijn Ctrl-toets daarentegen staat altijd op dezelfde plaats.  Voor het vinden van muis, pointer, et cetera is communicatie met en arbeid van mijn hersens nodig en die is relatief traag.  Als ik tijdens het typen wil opslaan doen mijn vingers in emacs Ctrl-X Ctrl-S voordat ik het merk en is de handeling sneller afgerond dan het bewegen van mijn rechterhand van het toetsenbord naar de muis, waarna de hele muishandeling voor opslaan eigenlijk nog moet beginnen.  Als studenten vragen hoe een bepaalde handeling te verrichten met het toetsenbord weten mijn hersens het soms ook niet, maar kom ik erachter door die handeling heel langzaam uit te voeren.  Met Alt-Tab ben ik in een fractie van een seconde in mijn andere venster, zonder kijken of zoeken.  Zelfs de ARBO geeft als tip om meer gebruik te maken van sneltoetsen ten koste van de muis.[fn:1]
+
+Ook tijdens het typen van de tekst zelf ben ik erg blij met het toetsenbord.  Stel je voor dat je iedere letter met de muis uit een lijst met alle opties zou moeten kiezen.  Of erger nog, ieder woord uit een woordenlijst van de Nederlandse taal.  Het leven met alleen een toetsenbord lijkt mij een stuk prettiger dan het leven met alleen een muis.
+
+Natuurlijk is een muis met grafisch menu veel handiger als je een taak niet vaak uitvoert (nog los van grafische handelingen, zoals het bewerken van een foto in Gimp).  Het duurt dan weliswaar lang, maar is slechts eenmalig en gaat een stuk sneller dan het leren van de toetsencombinatie.  Om dezelfde reden is de bus veel handiger dan een auto als je niet vaak gaat reizen; binnen 15 minuten kun je vaak al in een bus stappen, terwijl autorijden maanden aan lessen en een hoop geld kost.  Toch is die investering van tijd en geld het waard voor veel mensen - ik rijd meerdere keren per jaar auto en ben dus blij met mijn vroegere rijlessen.  Mijn computer gebruik ik zelfs meerdere keren per dag en dus is het aanleren van een reeks aan commando's en toetsencombinaties in bijvoorbeeld bash en emacs mij meer dan waard.
+
+Misschien geldt dat ook wel voor u.  Dus stop die muis in het kooitje waar zij thuishoort en zoek de belangrijkste sneltoetsen van uw favoriete programma's eens op.  Binnen afzienbare tijd weten uw vingers die mogelijk beter dan uzelf!
+
+
+Marc van der Sluys.
+
+
+[fn:1] https://www.arboportaal.nl/onderwerpen/computerwerk/tips-voor-het-optimaal-werken-met-een-beeldscherm
