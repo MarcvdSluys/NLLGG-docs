@@ -1,0 +1,30 @@
+# Created 2021-07-25 Sun 16:24
+#+title: FOSS op scholen
+#+author: Marc van der Sluys
+
+Ik ben onderzoeker bij een hogeschool, waar ik veel met software werk voor het modelleren van systemen, het bouwen van meetsystemen en het analyseren van data.  Daarnaast gaf ik les in het vak Operating systems, waarin de studenten Embedded systems engineering leren om C-programma's te schrijven die nauw samenwerken met het GNU/Linux besturingssysteem (OS).  Leuk en spannend, want de helft van de stof kende ik van de Bash shell, maar de andere helft moest ik leren.  En ik heb meteen maar zaken als Bash, emacs, git en GitHub in het curriculum gestopt.  Ook moeten de studenten nu een Arch Linux-systeem installeren en configureren op een Raspberry Pi.
+
+Het is echter schrikbarend dat dit zo'n beetje het enige onderdeel van hun opleiding is waar deze technische programmeurs in aanraking komen met Linux (veelal onder VMWare).  Op open dagen wordt aan toekomstige studenten verkondigd dat ze in het hoger onderwijs leren om kritisch na te denken, maar op school wordt doorgaans impliciet medegedeeld dat er van de circa 100 veelgebruikte besturingssystemen maar één echt in aanmerking komt.[fn:1]  Dát mensen na een kritische vergelijking kiezen voor Windows als beste oplossing is prima, maar dat moet dan een weloverwogen keuze zijn.  Volgens mij is het een taak van de hogeschool om studenten kritisch te leren nadenken zodat ze de juiste keuzes kunnen maken, niet om die keuzes voor hen te maken.
+
+Onze studenten leren embedded apparaatjes bouwen.  Ik stel me voor dat zo'n student na haar studie als ZZP'er een apparaatje bouwt als wij vorig jaar hebben gekocht.  Dat meet onder andere CO2 en fijnstof, heeft een display om dat weer te geven en laat zich via het netwerk uitlezen.  Op mijn Plasma-desktop popt er nu iets op wanneer er een raam open of dicht moet.  De ZZP'er koopt de elektronica-onderdelen, bouwt het apparaatje en wil ook winst maken.  Verkoopprijs: €150.  Oh, en €100 voor de OS-licentie, dus totaal €250.  Maar een alumnus van een andere school bouwt eenzelfde apparaatje en gebruikt een FOSS (free open-source software) OS van €0.  Verkoopprijs: €100, want de hardware is lichter door het efficiëntere OS.  Welk van deze twee ZZP'ers zal beter boeren?
+
+Bij veel andere vakken komt men niet verder dan hoe je een softwarepakket koopt (nu nog gratis via een onderwijslicentie, maar later, als je ZZP'er bent en alleen met dit pakket overweg kunt, lopen de kosten op) en gebruikt.  Maar we geven een automotivestudent toch ook niet alleen autoverkoop- en rijlessen?  Waarom gelden er voor software andere regels?
+
+De "impliciete mededeling" van hierboven klinkt vreemd, maar minder vreemd dan hoe dit gebeurt.  Voor iedere ICT-toepassing op school moet er worden gezocht naar de beste softwareleverancier voor de aanschaf.[fn:2]  Voor het OS van de laptops is dat Microsoft.  Voor Office-pakketten ook.[fn:3]  Voor email Microsoft.[fn:3],[fn:4]  En voor agendabeheer kwam Microsoft als beste uit de bus.[fn:3]  Hetzelfde geldt voor de systemen voor medewerkersgegevens, declaratie, het online lesrooster, lesinformatie voor studenten en vergaderen in coronatijd.[fn:5]
+
+Het vreemde hieraan is dat Microsoft hier steevast als "beste" uit de bus komt.  Ik vind dat even merkwaardig als een tollende, dronken, blinde darter die steeds de roos treft.  En is een emailoplossing waarmee je je email niet kunt lezen echt beter?  Ik vind mijn rsync-scriptje om mijn dictaat in een paar seconden in de achtergrond te updaten op mijn website "beter" dan het systeem waar dat met vijf minuten klikken en typen gebeurt.  Hoe moeten we studenten kritisch krijgen als we hun steeds dit soort voorbeelden voorschotelen?
+
+Ik snap ook wel dat FOSS niet de oplossing is voor alles en iedereen.  Maar laten we proberen onze hoger opgeleiden kritisch te leren nadenken in plaats van te hersenspoelen, zodat ze tenminste op de hoogte zijn van het bestaan van FOSS, zelf keuzes kunnen maken en niet met hun diploma nog in de hand al 3-0 achterstaan.  En laten we die handige ICT-ers dan vervolgens aannemen om goede systemen op te zetten, zodat alles in onderwijsland gladder verloopt en we onze studenten nóg beter kunnen opleiden.  Een soort omgekeerde vicieuze cirkel dus.
+
+
+Marc van der Sluys.
+
+[fn:1] In werkelijkheid wordt er zelfs niet vermeld dát er keuze is.
+
+[fn:2] Want software is iets dat je koopt!
+
+[fn:3] Ook al draait dat op slechts een handjevol van de circa 100 veelgebruikte OSs.
+
+[fn:4] Zodat ik al ruim een jaar niet fatsoenlijk bij mijn email kan, want "IMAP, POP3 en SMTP zijn onveilig"!
+
+[fn:5] Van Teams is een binaryversie beschikbaar die werkt onder Linux.  Die heeft niet alle functies, en nog niet overal is het search and replace van "Skype" naar "Teams" in de broncode gelukt.  Zo zegt mijn Linux-systeem "Skype is using your microphone", ook als ik niet in een Teamsvergadering zit.  Programma afsluiten na gebruik dus, en even hacken zodat het niet steeds automatisch opstart.
