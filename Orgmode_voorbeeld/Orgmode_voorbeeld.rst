@@ -207,7 +207,7 @@ LaTeX moet geinstalleerd zijn...
 
 1. Typ ``C-c C-, s`` voor een ``#+begin/end_src``-block en voeg zelf ``elisp`` toe
 
-2. Typ wat code en return een waarde
+2. Typ wat code in en return een waarde (zie voorbeeld hieronder)
 
 3. In het codeblok, typ ``C-c C-c`` en beantwoord de vraag onderin met ``yes ENTER``
 
@@ -291,16 +291,16 @@ hieronder gebruikt kan worden:
 
 ::
 
-    -rw-r--r-- 1 sluys sluys   8827 Dec 12 11:11 Orgmode_voorbeeld_ascii.txt
-    -rw-r--r-- 1 sluys sluys  27250 Dec 12 11:50 Orgmode_voorbeeld.html
-    -rw-r--r-- 1 sluys sluys   9414 Dec 12 11:59 Orgmode_voorbeeld.md
-    -rw-r--r-- 1 sluys sluys  37244 Dec 12 12:00 Orgmode_voorbeeld.odt
-    -rw-r--r-- 1 sluys sluys   8480 Dec 12 11:59 Orgmode_voorbeeld.org
-    -rw-r--r-- 1 sluys sluys 308254 Dec 12 12:00 Orgmode_voorbeeld.pdf
-    -rw-r--r-- 1 sluys sluys  23293 Dec 12 12:01 Orgmode_voorbeeld.png
-    -rw-r--r-- 1 sluys sluys   9639 Dec 12 11:10 Orgmode_voorbeeld.rst
-    -rw-r--r-- 1 sluys sluys  12052 Dec 12 12:00 Orgmode_voorbeeld.tex
-    -rw-r--r-- 1 sluys sluys  10348 Dec 12 11:12 Orgmode_voorbeeld_utf8.txt
+    -rw-r--r-- 1 sluys sluys   9184 Dec 12 12:01 Orgmode_voorbeeld_ascii.txt
+    -rw-r--r-- 1 sluys sluys  26861 Dec 12 12:10 Orgmode_voorbeeld.html
+    -rw-r--r-- 1 sluys sluys   9443 Dec 12 12:30 Orgmode_voorbeeld.md
+    -rw-r--r-- 1 sluys sluys  37266 Dec 12 12:31 Orgmode_voorbeeld.odt
+    -rw-r--r-- 1 sluys sluys   8509 Dec 12 12:15 Orgmode_voorbeeld.org
+    -rw-r--r-- 1 sluys sluys 308286 Dec 12 12:31 Orgmode_voorbeeld.pdf
+    -rw-r--r-- 1 sluys sluys  23293 Dec 12 12:31 Orgmode_voorbeeld.png
+    -rw-r--r-- 1 sluys sluys  10210 Dec 12 12:01 Orgmode_voorbeeld.rst
+    -rw-r--r-- 1 sluys sluys  12082 Dec 12 12:31 Orgmode_voorbeeld.tex
+    -rw-r--r-- 1 sluys sluys  10605 Dec 12 12:02 Orgmode_voorbeeld_utf8.txt
 
 Gebruik awk om de filename en grootte te nemen van de files uit ``ls`` en maak een tabel:
 
@@ -312,25 +312,25 @@ Gebruik awk om de filename en grootte te nemen van de files uit ``ls`` en maak e
 .. table::
 
     +--------+------------------------------------------------+
-    |   8827 | Orgmode\ :sub:`voorbeeld`\ \ :sub:`ascii.txt`\ |
+    |   9184 | Orgmode\ :sub:`voorbeeld`\ \ :sub:`ascii.txt`\ |
     +--------+------------------------------------------------+
-    |  27250 | Orgmode\ :sub:`voorbeeld.html`\                |
+    |  26861 | Orgmode\ :sub:`voorbeeld.html`\                |
     +--------+------------------------------------------------+
-    |   9414 | Orgmode\ :sub:`voorbeeld.md`\                  |
+    |   9443 | Orgmode\ :sub:`voorbeeld.md`\                  |
     +--------+------------------------------------------------+
-    |  37244 | Orgmode\ :sub:`voorbeeld.odt`\                 |
+    |  37266 | Orgmode\ :sub:`voorbeeld.odt`\                 |
     +--------+------------------------------------------------+
-    |   8480 | Orgmode\ :sub:`voorbeeld.org`\                 |
+    |   8509 | Orgmode\ :sub:`voorbeeld.org`\                 |
     +--------+------------------------------------------------+
-    | 308254 | Orgmode\ :sub:`voorbeeld.pdf`\                 |
+    | 308286 | Orgmode\ :sub:`voorbeeld.pdf`\                 |
     +--------+------------------------------------------------+
     |  23293 | Orgmode\ :sub:`voorbeeld.png`\                 |
     +--------+------------------------------------------------+
-    |   9639 | Orgmode\ :sub:`voorbeeld.rst`\                 |
+    |  10210 | Orgmode\ :sub:`voorbeeld.rst`\                 |
     +--------+------------------------------------------------+
-    |  12052 | Orgmode\ :sub:`voorbeeld.tex`\                 |
+    |  12082 | Orgmode\ :sub:`voorbeeld.tex`\                 |
     +--------+------------------------------------------------+
-    |  10348 | Orgmode\ :sub:`voorbeeld`\ \ :sub:`utf8.txt`\  |
+    |  10605 | Orgmode\ :sub:`voorbeeld`\ \ :sub:`utf8.txt`\  |
     +--------+------------------------------------------------+
 
 Gebruik Python om o.a. de kleinste en grootste file te vinden in de tabel van ``awk``:
@@ -345,8 +345,8 @@ Gebruik Python om o.a. de kleinste en grootste file te vinden in de tabel van ``
 
 ::
 
-    [8827, 'Orgmode_voorbeeld_ascii.txt']
+    [9184, 'Orgmode_voorbeeld_ascii.txt']
     Aantal bestanden: 10
-    Kleinste bestand: (8480 b) Orgmode_voorbeeld.org
-    Grootste bestand: (308254 b) Orgmode_voorbeeld.pdf
-    Totale grootte: 454.801 kb
+    Kleinste bestand: (8509 b) Orgmode_voorbeeld.org
+    Grootste bestand: (308286 b) Orgmode_voorbeeld.pdf
+    Totale grootte: 455.739 kb

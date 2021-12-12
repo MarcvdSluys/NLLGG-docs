@@ -1,18 +1,18 @@
-- [Toetsaanslagen](#org88c0b2e)
-- [Te doen <code>[1/3]</code>](#org866c2e3)
-  - [MarColumn december schrijven <code>[6/6]</code>](#org363f945)
-  - [File met eenvoudige voorbeelden toevoegen <code>[5/6]</code>](#org19c3ab1)
-    - [Tekststijl](#orgfeba73d)
-    - [Takenlijst en kopjes <code>[33%]</code>](#orgf691df2)
-    - [Links](#org99a5eca)
-    - [Tabel/spreadsheet](#org7ff26ad)
-  - [Meer geavanceerde voorbeelden](#orgd682c47)
-    - [Formule](#org6e8637e)
-    - [Code](#orgfb9c1e6)
+- [Toetsaanslagen](#orgf30c8df)
+- [Te doen <code>[1/3]</code>](#org81778ae)
+  - [MarColumn december schrijven <code>[6/6]</code>](#orgeac9505)
+  - [File met eenvoudige voorbeelden toevoegen <code>[5/6]</code>](#org4551e3a)
+    - [Tekststijl](#orgdda7a18)
+    - [Takenlijst en kopjes <code>[33%]</code>](#org4aa4629)
+    - [Links](#orgc28d6de)
+    - [Tabel/spreadsheet](#orga55cc76)
+  - [Meer geavanceerde voorbeelden](#orgdde8a0c)
+    - [Formule](#org65c5323)
+    - [Code](#org8e33ed3)
 
 
 
-<a id="org88c0b2e"></a>
+<a id="orgf30c8df"></a>
 
 # Toetsaanslagen
 
@@ -24,12 +24,12 @@
 5.  Zie ook <http://pub.vandersluys.nl/download/GettingStartedWithEmacs.pdf> (met name sectie 1.2 en het begin van 1.3)
 
 
-<a id="org866c2e3"></a>
+<a id="org81778ae"></a>
 
 # TODO Te doen <code>[1/3]</code>
 
 
-<a id="org363f945"></a>
+<a id="orgeac9505"></a>
 
 ## DONE MarColumn december schrijven <code>[6/6]</code>
 
@@ -41,12 +41,12 @@
 6.  [X] code, formules
 
 
-<a id="org19c3ab1"></a>
+<a id="org4551e3a"></a>
 
 ## PROGRESS File met eenvoudige voorbeelden toevoegen <code>[5/6]</code>
 
 
-<a id="orgfeba73d"></a>
+<a id="orgdda7a18"></a>
 
 ### DONE Tekststijl
 
@@ -57,11 +57,11 @@
 -   `code` of `vebatim`
 
 
-<a id="orgf691df2"></a>
+<a id="org4aa4629"></a>
 
 ### DONE Takenlijst en kopjes <code>[33%]</code>
 
--   [X] Zie [2](#org866c2e3)
+-   [X] Zie [2](#org81778ae)
 -   [X] inspringen:
     -   zet de cursor op een item (b.v. in deze lijst) en typ `Alt-pijl rechts/links`
     -   hetzelfde voor kopjes
@@ -99,16 +99,16 @@
         4.  `C-c C-c` op de regel switcht tussen `[ ]` en `[X]`
 
 
-<a id="org99a5eca"></a>
+<a id="orgc28d6de"></a>
 
 ### DONE Links
 
--   Interne link: zie [2](#org866c2e3)
+-   Interne link: zie [2](#org81778ae)
 -   Externe link: <https://github.com/MarcvdSluys/NLLGG-docs>
 -   Externe link met onschrijving: [NLLGG docs](https://github.com/MarcvdSluys/NLLGG-docs)
 
 
-<a id="org7ff26ad"></a>
+<a id="orga55cc76"></a>
 
 ### DONE Tabel/spreadsheet
 
@@ -128,12 +128,12 @@
 | 5 | 25            | 125           |
 
 
-<a id="orgd682c47"></a>
+<a id="orgdde8a0c"></a>
 
 ## PROGRESS Meer geavanceerde voorbeelden
 
 
-<a id="org6e8637e"></a>
+<a id="org65c5323"></a>
 
 ### DONE Formule
 
@@ -144,7 +144,7 @@ LaTeX moet geinstalleerd zijn&#x2026;
 2.  tussen de tekst: typ `\[\int_0^\infty \frac{\sin x}{x} dx\]` en druk `C-c C-x C-l` $$\int_0^\infty \frac{\sin x}{x} dx$$
 
 
-<a id="orgfb9c1e6"></a>
+<a id="org8e33ed3"></a>
 
 ### ACTIVE Code
 
@@ -153,7 +153,7 @@ LaTeX moet geinstalleerd zijn&#x2026;
 1.  Elisp (emacs lisp script)
 
     1.  Typ `C-c C-, s` voor een `#+begin/end_src`-block en voeg zelf `elisp` toe
-    2.  Typ wat code en return een waarde
+    2.  Typ wat code in en return een waarde (zie voorbeeld hieronder)
     3.  In het codeblok, typ `C-c C-c` en beantwoord de vraag onderin met `yes ENTER`
     4.  Het resultaat verschijnt in een `RESULTS`-blok onder de code.
     
@@ -215,16 +215,16 @@ LaTeX moet geinstalleerd zijn&#x2026;
     ls -lb Orgmode_voorbeeld[._]*
     ```
     
-        -rw-r--r-- 1 sluys sluys   8827 Dec 12 11:11 Orgmode_voorbeeld_ascii.txt
-        -rw-r--r-- 1 sluys sluys  27250 Dec 12 11:50 Orgmode_voorbeeld.html
-        -rw-r--r-- 1 sluys sluys   9758 Dec 12 11:49 Orgmode_voorbeeld.md
-        -rw-r--r-- 1 sluys sluys  37349 Dec 12 11:46 Orgmode_voorbeeld.odt
-        -rw-r--r-- 1 sluys sluys   8480 Dec 12 11:59 Orgmode_voorbeeld.org
-        -rw-r--r-- 1 sluys sluys 276629 Dec 12 11:50 Orgmode_voorbeeld.pdf
-        -rw-r--r-- 1 sluys sluys  23293 Dec 12 11:59 Orgmode_voorbeeld.png
-        -rw-r--r-- 1 sluys sluys   9639 Dec 12 11:10 Orgmode_voorbeeld.rst
-        -rw-r--r-- 1 sluys sluys  10181 Dec 12 11:50 Orgmode_voorbeeld.tex
-        -rw-r--r-- 1 sluys sluys  10348 Dec 12 11:12 Orgmode_voorbeeld_utf8.txt
+        -rw-r--r-- 1 sluys sluys   9184 Dec 12 12:01 Orgmode_voorbeeld_ascii.txt
+        -rw-r--r-- 1 sluys sluys  26861 Dec 12 12:10 Orgmode_voorbeeld.html
+        -rw-r--r-- 1 sluys sluys   9414 Dec 12 11:59 Orgmode_voorbeeld.md
+        -rw-r--r-- 1 sluys sluys  37244 Dec 12 12:00 Orgmode_voorbeeld.odt
+        -rw-r--r-- 1 sluys sluys   8509 Dec 12 12:15 Orgmode_voorbeeld.org
+        -rw-r--r-- 1 sluys sluys 308254 Dec 12 12:00 Orgmode_voorbeeld.pdf
+        -rw-r--r-- 1 sluys sluys  23293 Dec 12 12:30 Orgmode_voorbeeld.png
+        -rw-r--r-- 1 sluys sluys  10210 Dec 12 12:01 Orgmode_voorbeeld.rst
+        -rw-r--r-- 1 sluys sluys  12052 Dec 12 12:00 Orgmode_voorbeeld.tex
+        -rw-r--r-- 1 sluys sluys  10605 Dec 12 12:02 Orgmode_voorbeeld_utf8.txt
     
     Gebruik awk om de filename en grootte te nemen van de files uit `ls` en maak een tabel:
     
@@ -232,16 +232,16 @@ LaTeX moet geinstalleerd zijn&#x2026;
     BEGIN { OFS="|" }; { print $5, $9}
     ```
     
-    | 8827   | Orgmode<sub>voorbeeld</sub><sub>ascii.txt</sub> |
-    | 27250  | Orgmode<sub>voorbeeld.html</sub>                |
-    | 9758   | Orgmode<sub>voorbeeld.md</sub>                  |
-    | 37349  | Orgmode<sub>voorbeeld.odt</sub>                 |
-    | 8480   | Orgmode<sub>voorbeeld.org</sub>                 |
-    | 276629 | Orgmode<sub>voorbeeld.pdf</sub>                 |
+    | 9184   | Orgmode<sub>voorbeeld</sub><sub>ascii.txt</sub> |
+    | 26861  | Orgmode<sub>voorbeeld.html</sub>                |
+    | 9414   | Orgmode<sub>voorbeeld.md</sub>                  |
+    | 37244  | Orgmode<sub>voorbeeld.odt</sub>                 |
+    | 8509   | Orgmode<sub>voorbeeld.org</sub>                 |
+    | 308254 | Orgmode<sub>voorbeeld.pdf</sub>                 |
     | 23293  | Orgmode<sub>voorbeeld.png</sub>                 |
-    | 9639   | Orgmode<sub>voorbeeld.rst</sub>                 |
-    | 10181  | Orgmode<sub>voorbeeld.tex</sub>                 |
-    | 10348  | Orgmode<sub>voorbeeld</sub><sub>utf8.txt</sub>  |
+    | 10210  | Orgmode<sub>voorbeeld.rst</sub>                 |
+    | 12052  | Orgmode<sub>voorbeeld.tex</sub>                 |
+    | 10605  | Orgmode<sub>voorbeeld</sub><sub>utf8.txt</sub>  |
     
     Gebruik Python om o.a. de kleinste en grootste file te vinden in de tabel van `awk`:
     
@@ -253,8 +253,8 @@ LaTeX moet geinstalleerd zijn&#x2026;
     print("Totale grootte: %0.3f kb"     % (sum([x for x,y in table]) / 1000))
     ```
     
-        [8827, 'Orgmode_voorbeeld_ascii.txt']
+        [9184, 'Orgmode_voorbeeld_ascii.txt']
         Aantal bestanden: 10
-        Kleinste bestand: (8480 b) Orgmode_voorbeeld.org
-        Grootste bestand: (276629 b) Orgmode_voorbeeld.pdf
-        Totale grootte: 421.754 kb
+        Kleinste bestand: (8509 b) Orgmode_voorbeeld.org
+        Grootste bestand: (308254 b) Orgmode_voorbeeld.pdf
+        Totale grootte: 455.626 kb
