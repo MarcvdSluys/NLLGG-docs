@@ -117,10 +117,10 @@ LaTeX moet geinstalleerd zijn...
 2. Typ wat code en return een waarde
 3. In het codeblok, typ ~C-c C-c~ en beantwoord de vraag onderin met ~yes ENTER~
 4. Het resultaat verschijnt in een ~RESULTS~-blok onder de code.
-#+begin_src elisp :exports both
-  (concat  (emacs-version)
-           "\nOrgmode " (org-version))  
-#+end_src
+#+BEGIN_SRC elisp :exports both
+(concat  (emacs-version)
+	 "\nOrgmode " (org-version))  
+#+END_SRC
 
 #+results:
 : GNU Emacs 27.2 (build 1, x86_64-pc-linux-gnu, GTK+ Version 3.24.29, cairo version 1.16.0)
@@ -129,9 +129,9 @@ LaTeX moet geinstalleerd zijn...
 
 **** Bash
 Bash moet geinstalleerd zijn en Babel moet geactiveerd zijn voor Bash...
-#+begin_src bash :exports both
-  echo "Mijn homedirectory is $HOME"
-#+end_src
+#+BEGIN_SRC bash :exports both
+echo "Mijn homedirectory is $HOME"
+#+END_SRC
 
 #+results:
 : Mijn homedirectory is /home/sluys
@@ -144,25 +144,25 @@ Python moet geinstalleerd zijn en Babel moet geactiveerd zijn voor Python...
 3. In het codeblok, typ ~C-c C-c~ en beantwoord de vraag onderin met ~yes ENTER~
 4. De returnwaarde verschijnt onder de code in
 #+name: som   
-#+begin_src python :exports both
-  x=3
-  y=4
-  z=x*y
-  return z
-#+end_src
+#+BEGIN_SRC python :exports both
+x=3
+y=4
+z=x*y
+return z
+#+END_SRC
 
 #+results: som
 : 12
 
 
-#+begin_src python :python python3 :results file :exports both
-  import numpy as np
-  import matplotlib.pyplot as plt
-  x = np.linspace(-15,15)
-  plt.plot(x, np.sin(x)/x)
-  plt.savefig('Orgmode_voorbeeld.png')
-  return 'Orgmode_voorbeeld.png'  # Return filename to orgmode
-#+end_src
+#+BEGIN_SRC python :python python3 :results file :exports both
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.linspace(-15,15)
+plt.plot(x, np.sin(x)/x)
+plt.savefig('Orgmode_voorbeeld.png')
+return 'Orgmode_voorbeeld.png'  # Return filename to orgmode
+#+END_SRC
 
 #+results:
 [[file:Orgmode_voorbeeld.png]]
@@ -170,48 +170,61 @@ Python moet geinstalleerd zijn en Babel moet geactiveerd zijn voor Python...
 **** Python + Bash
 + Hier gejat: https://jherrlin.github.io/posts/emacs-orgmode-source-code-blocks/
 
-Print een lijst met .org files van dit jaar in de huidige directory in bash.  Ik wil zowel (~both~) de code
-als het resultaat exporteren (naar bijvoorbeeld .md of .pdf).  En ik geef de code een naam (~ls~) zodat de
-output hieronder gebruikt kan worden:
+Print een lijst met een selectie van files in deze directory in bash.  Ik wil zowel (~both~) de code als het
+resultaat exporteren (naar bijvoorbeeld .md of .pdf).  En ik geef de code een naam (~ls~) zodat de output
+hieronder gebruikt kan worden:
 #+name: ls
-#+begin_src bash :dir . :results output :exports both
-  ls -l 2021-*.org | grep -v Orgmode_voorbeeld
-#+end_src
+#+BEGIN_SRC bash :dir . :results output :exports both
+ls -lb Orgmode_voorbeeld[._]*
+#+END_SRC
 
 #+results: ls
-: -rw-r--r-- 1 sluys sluys 2873 Jan 17  2021 2021-01__FOSSvsCommercieel.org
-: -rw-r--r-- 1 sluys sluys 4069 Apr 19  2021 2021-04__GentooLinux.org
-: -rw-r--r-- 1 sluys sluys 3973 Jun 13 10:57 2021-07__Ongedierte.org
-: -rw-r--r-- 1 sluys sluys 4908 Jul 25 16:24 2021-08__FOSSopScholen.org
-: -rw-r--r-- 1 sluys sluys 5063 Nov  5 09:39 2021-10__TheWinMacLinuxExperience_published.org
-: -rw-r--r-- 1 sluys sluys 4646 Dec  6 11:11 2021-12__Orgmode.org
+#+begin_example
+-rw-r--r-- 1 sluys sluys   8827 Dec 12 11:11 Orgmode_voorbeeld_ascii.txt
+-rw-r--r-- 1 sluys sluys  27250 Dec 12 11:50 Orgmode_voorbeeld.html
+-rw-r--r-- 1 sluys sluys   9758 Dec 12 11:49 Orgmode_voorbeeld.md
+-rw-r--r-- 1 sluys sluys  37349 Dec 12 11:46 Orgmode_voorbeeld.odt
+-rw-r--r-- 1 sluys sluys   8316 Dec 12 11:58 Orgmode_voorbeeld.org
+-rw-r--r-- 1 sluys sluys 276629 Dec 12 11:50 Orgmode_voorbeeld.pdf
+-rw-r--r-- 1 sluys sluys  23293 Dec 12 11:50 Orgmode_voorbeeld.png
+-rw-r--r-- 1 sluys sluys   9639 Dec 12 11:10 Orgmode_voorbeeld.rst
+-rw-r--r-- 1 sluys sluys  10181 Dec 12 11:50 Orgmode_voorbeeld.tex
+-rw-r--r-- 1 sluys sluys  10348 Dec 12 11:12 Orgmode_voorbeeld_utf8.txt
+#+end_example
 
-Gebruik awk om de filename en grootte te nemen en maak een tabel:
+Gebruik awk om de filename en grootte te nemen van de files uit ~ls~ en maak een tabel:
 #+name: awk
 #+begin_SRC awk :results table :stdin ls :exports both
-  BEGIN { OFS="|" }; { print $9, $5}
+  BEGIN { OFS="|" }; { print $5, $9}
 #+end_SRC
 
 #+results: awk
-| 2021-01__FOSSvsCommercieel.org                  | 2873 |
-| 2021-04__GentooLinux.org                        | 4069 |
-| 2021-07__Ongedierte.org                         | 3973 |
-| 2021-08__FOSSopScholen.org                      | 4908 |
-| 2021-10__TheWinMacLinuxExperience_published.org | 5063 |
-| 2021-12__Orgmode.org                            | 4646 |
+|  40265 | init.el                     |
+|   8827 | Orgmode_voorbeeld_ascii.txt |
+|  26144 | Orgmode_voorbeeld.html      |
+|   8949 | Orgmode_voorbeeld.md        |
+|  37236 | Orgmode_voorbeeld.odt       |
+|   8455 | Orgmode_voorbeeld.org       |
+| 309922 | Orgmode_voorbeeld.pdf       |
+|  23293 | Orgmode_voorbeeld.png       |
+|    302 | Orgmode_voorbeeld.pyg       |
+|   9639 | Orgmode_voorbeeld.rst       |
+|  11585 | Orgmode_voorbeeld.tex       |
+|  10348 | Orgmode_voorbeeld_utf8.txt  |
+|    111 | readme.org                  |
 
-Gebruik Python om o.a. de kleinste en grootste file te vinden:
+Gebruik Python om o.a. de kleinste en grootste file te vinden in de tabel van ~awk~:
 #+begin_src python :results output :var table=awk :exports both
   print(table[0])                      # Eerste rij van de tabel zoals ingelezen
-  print("Aantal columns: %i" % len(table))
-  print("Kortste column: %s (%i b)" % tuple(min(table)))
-  print("Langste column: %s (%i b)" % tuple(max(table)))
-  print("Totale grootte: %0.3f kb"  % (sum([x for y,x in table]) / 1000))
+  print("Aantal bestanden: %i"         % len(table))
+  print("Kleinste bestand: (%i b) %s"  % tuple(min(table)))
+  print("Grootste bestand: (%i b) %s"  % tuple(max(table)))
+  print("Totale grootte: %0.3f kb"     % (sum([x for x,y in table]) / 1000))
 #+end_src
 
 #+results:
-: ['2021-01__FOSSvsCommercieel.org', 2873]
-: Aantal columns: 6
-: Kortste column: 2021-01__FOSSvsCommercieel.org (2873 b)
-: Langste column: 2021-12__Orgmode.org (4646 b)
-: Totale grootte: 25.532 kb
+: [8827, 'Orgmode_voorbeeld_ascii.txt']
+: Aantal bestanden: 10
+: Kleinste bestand: (8316 b) Orgmode_voorbeeld.org
+: Grootste bestand: (276629 b) Orgmode_voorbeeld.pdf
+: Totale grootte: 421.590 kb

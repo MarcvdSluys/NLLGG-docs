@@ -1,18 +1,18 @@
-- [Toetsaanslagen](#orgfef187c)
-- [Te doen <code>[1/3]</code>](#org75f2258)
-  - [MarColumn december schrijven <code>[6/6]</code>](#orgcb3239f)
-  - [File met eenvoudige voorbeelden toevoegen <code>[5/6]</code>](#org9688a10)
-    - [Tekststijl](#org02cc5dc)
-    - [Takenlijst en kopjes <code>[33%]</code>](#org8671514)
-    - [Links](#org13130a1)
-    - [Tabel/spreadsheet](#org5d165a6)
-  - [Meer geavanceerde voorbeelden](#org823a287)
-    - [Formule](#org6df4ba3)
-    - [Code](#orgc35766d)
+- [Toetsaanslagen](#org88c0b2e)
+- [Te doen <code>[1/3]</code>](#org866c2e3)
+  - [MarColumn december schrijven <code>[6/6]</code>](#org363f945)
+  - [File met eenvoudige voorbeelden toevoegen <code>[5/6]</code>](#org19c3ab1)
+    - [Tekststijl](#orgfeba73d)
+    - [Takenlijst en kopjes <code>[33%]</code>](#orgf691df2)
+    - [Links](#org99a5eca)
+    - [Tabel/spreadsheet](#org7ff26ad)
+  - [Meer geavanceerde voorbeelden](#orgd682c47)
+    - [Formule](#org6e8637e)
+    - [Code](#orgfb9c1e6)
 
 
 
-<a id="orgfef187c"></a>
+<a id="org88c0b2e"></a>
 
 # Toetsaanslagen
 
@@ -24,12 +24,12 @@
 5.  Zie ook <http://pub.vandersluys.nl/download/GettingStartedWithEmacs.pdf> (met name sectie 1.2 en het begin van 1.3)
 
 
-<a id="org75f2258"></a>
+<a id="org866c2e3"></a>
 
 # TODO Te doen <code>[1/3]</code>
 
 
-<a id="orgcb3239f"></a>
+<a id="org363f945"></a>
 
 ## DONE MarColumn december schrijven <code>[6/6]</code>
 
@@ -41,12 +41,12 @@
 6.  [X] code, formules
 
 
-<a id="org9688a10"></a>
+<a id="org19c3ab1"></a>
 
 ## PROGRESS File met eenvoudige voorbeelden toevoegen <code>[5/6]</code>
 
 
-<a id="org02cc5dc"></a>
+<a id="orgfeba73d"></a>
 
 ### DONE Tekststijl
 
@@ -57,11 +57,11 @@
 -   `code` of `vebatim`
 
 
-<a id="org8671514"></a>
+<a id="orgf691df2"></a>
 
 ### DONE Takenlijst en kopjes <code>[33%]</code>
 
--   [X] Zie [2](#org75f2258)
+-   [X] Zie [2](#org866c2e3)
 -   [X] inspringen:
     -   zet de cursor op een item (b.v. in deze lijst) en typ `Alt-pijl rechts/links`
     -   hetzelfde voor kopjes
@@ -99,16 +99,16 @@
         4.  `C-c C-c` op de regel switcht tussen `[ ]` en `[X]`
 
 
-<a id="org13130a1"></a>
+<a id="org99a5eca"></a>
 
 ### DONE Links
 
--   Interne link: zie [2](#org75f2258)
+-   Interne link: zie [2](#org866c2e3)
 -   Externe link: <https://github.com/MarcvdSluys/NLLGG-docs>
 -   Externe link met onschrijving: [NLLGG docs](https://github.com/MarcvdSluys/NLLGG-docs)
 
 
-<a id="org5d165a6"></a>
+<a id="org7ff26ad"></a>
 
 ### DONE Tabel/spreadsheet
 
@@ -128,12 +128,12 @@
 | 5 | 25            | 125           |
 
 
-<a id="org823a287"></a>
+<a id="orgd682c47"></a>
 
 ## PROGRESS Meer geavanceerde voorbeelden
 
 
-<a id="org6df4ba3"></a>
+<a id="org6e8637e"></a>
 
 ### DONE Formule
 
@@ -144,7 +144,7 @@ LaTeX moet geinstalleerd zijn&#x2026;
 2.  tussen de tekst: typ `\[\int_0^\infty \frac{\sin x}{x} dx\]` en druk `C-c C-x C-l` $$\int_0^\infty \frac{\sin x}{x} dx$$
 
 
-<a id="orgc35766d"></a>
+<a id="orgfb9c1e6"></a>
 
 ### ACTIVE Code
 
@@ -209,44 +209,52 @@ LaTeX moet geinstalleerd zijn&#x2026;
 
     -   Hier gejat: <https://jherrlin.github.io/posts/emacs-orgmode-source-code-blocks/>
     
-    Print een lijst met .org files van dit jaar in de huidige directory in bash. Ik wil zowel (`both`) de code als het resultaat exporteren (naar bijvoorbeeld .md of .pdf). En ik geef de code een naam (`ls`) zodat de output hieronder gebruikt kan worden:
+    Print een lijst met een selectie van files in deze directory in bash. Ik wil zowel (`both`) de code als het resultaat exporteren (naar bijvoorbeeld .md of .pdf). En ik geef de code een naam (`ls`) zodat de output hieronder gebruikt kan worden:
     
     ```bash
-    ls -l 2021-*.org | grep -v Orgmode_voorbeeld
+    ls -lb Orgmode_voorbeeld[._]*
     ```
     
-        -rw-r--r-- 1 sluys sluys 2873 Jan 17  2021 2021-01__FOSSvsCommercieel.org
-        -rw-r--r-- 1 sluys sluys 4069 Apr 19  2021 2021-04__GentooLinux.org
-        -rw-r--r-- 1 sluys sluys 3973 Jun 13 10:57 2021-07__Ongedierte.org
-        -rw-r--r-- 1 sluys sluys 4908 Jul 25 16:24 2021-08__FOSSopScholen.org
-        -rw-r--r-- 1 sluys sluys 5063 Nov  5 09:39 2021-10__TheWinMacLinuxExperience_published.org
-        -rw-r--r-- 1 sluys sluys 4755 Dec  6 13:23 2021-12__Orgmode.org
+        -rw-r--r-- 1 sluys sluys   8827 Dec 12 11:11 Orgmode_voorbeeld_ascii.txt
+        -rw-r--r-- 1 sluys sluys  27250 Dec 12 11:50 Orgmode_voorbeeld.html
+        -rw-r--r-- 1 sluys sluys   9758 Dec 12 11:49 Orgmode_voorbeeld.md
+        -rw-r--r-- 1 sluys sluys  37349 Dec 12 11:46 Orgmode_voorbeeld.odt
+        -rw-r--r-- 1 sluys sluys   8480 Dec 12 11:59 Orgmode_voorbeeld.org
+        -rw-r--r-- 1 sluys sluys 276629 Dec 12 11:50 Orgmode_voorbeeld.pdf
+        -rw-r--r-- 1 sluys sluys  23293 Dec 12 11:59 Orgmode_voorbeeld.png
+        -rw-r--r-- 1 sluys sluys   9639 Dec 12 11:10 Orgmode_voorbeeld.rst
+        -rw-r--r-- 1 sluys sluys  10181 Dec 12 11:50 Orgmode_voorbeeld.tex
+        -rw-r--r-- 1 sluys sluys  10348 Dec 12 11:12 Orgmode_voorbeeld_utf8.txt
     
-    Gebruik awk om de filename en grootte te nemen en maak een tabel:
+    Gebruik awk om de filename en grootte te nemen van de files uit `ls` en maak een tabel:
     
     ```awk
-    BEGIN { OFS="|" }; { print $9, $5}
+    BEGIN { OFS="|" }; { print $5, $9}
     ```
     
-    | 2021-01\_<sub>FOSSvsCommercieel.org</sub>                            | 2873 |
-    | 2021-04\_<sub>GentooLinux.org</sub>                                  | 4069 |
-    | 2021-07\_<sub>Ongedierte.org</sub>                                   | 3973 |
-    | 2021-08\_<sub>FOSSopScholen.org</sub>                                | 4908 |
-    | 2021-10\_<sub>TheWinMacLinuxExperience</sub><sub>published.org</sub> | 5063 |
-    | 2021-12\_<sub>Orgmode.org</sub>                                      | 4755 |
+    | 8827   | Orgmode<sub>voorbeeld</sub><sub>ascii.txt</sub> |
+    | 27250  | Orgmode<sub>voorbeeld.html</sub>                |
+    | 9758   | Orgmode<sub>voorbeeld.md</sub>                  |
+    | 37349  | Orgmode<sub>voorbeeld.odt</sub>                 |
+    | 8480   | Orgmode<sub>voorbeeld.org</sub>                 |
+    | 276629 | Orgmode<sub>voorbeeld.pdf</sub>                 |
+    | 23293  | Orgmode<sub>voorbeeld.png</sub>                 |
+    | 9639   | Orgmode<sub>voorbeeld.rst</sub>                 |
+    | 10181  | Orgmode<sub>voorbeeld.tex</sub>                 |
+    | 10348  | Orgmode<sub>voorbeeld</sub><sub>utf8.txt</sub>  |
     
-    Gebruik Python om o.a. de kleinste en grootste file te vinden:
+    Gebruik Python om o.a. de kleinste en grootste file te vinden in de tabel van `awk`:
     
     ```python
     print(table[0])                      # Eerste rij van de tabel zoals ingelezen
-    print("Aantal columns: %i" % len(table))
-    print("Kortste column: %s (%i b)" % tuple(min(table)))
-    print("Langste column: %s (%i b)" % tuple(max(table)))
-    print("Totale grootte: %0.3f kb"  % (sum([x for y,x in table]) / 1000))
+    print("Aantal bestanden: %i"         % len(table))
+    print("Kleinste bestand: (%i b) %s"  % tuple(min(table)))
+    print("Grootste bestand: (%i b) %s"  % tuple(max(table)))
+    print("Totale grootte: %0.3f kb"     % (sum([x for x,y in table]) / 1000))
     ```
     
-        ['2021-01__FOSSvsCommercieel.org', 2873]
-        Aantal columns: 6
-        Kortste column: 2021-01__FOSSvsCommercieel.org (2873 b)
-        Langste column: 2021-12__Orgmode.org (4755 b)
-        Totale grootte: 25.641 kb
+        [8827, 'Orgmode_voorbeeld_ascii.txt']
+        Aantal bestanden: 10
+        Kleinste bestand: (8480 b) Orgmode_voorbeeld.org
+        Grootste bestand: (276629 b) Orgmode_voorbeeld.pdf
+        Totale grootte: 421.754 kb

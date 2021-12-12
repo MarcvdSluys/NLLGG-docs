@@ -256,49 +256,58 @@ _________________
   + Hier gejat:
     <https://jherrlin.github.io/posts/emacs-orgmode-source-code-blocks/>
 
-  Print een lijst met .org files van dit jaar in de huidige directory in
-  bash.  Ik wil zowel (`both') de code als het resultaat exporteren
-  (naar bijvoorbeeld .md of .pdf).  En ik geef de code een naam (`ls')
-  zodat de output hieronder gebruikt kan worden:
+  Print een lijst met een selectie van files in deze directory in bash.
+  Ik wil zowel (`both') de code als het resultaat exporteren (naar
+  bijvoorbeeld .md of .pdf).  En ik geef de code een naam (`ls') zodat
+  de output hieronder gebruikt kan worden:
   ,----
-  | ls -l 2021-*.org | grep -v Orgmode_voorbeeld
+  | ls -lb Orgmode_voorbeeld[._]*
   `----
 
   ,----
-  | -rw-r--r-- 1 sluys sluys 2873 Jan 17  2021 2021-01__FOSSvsCommercieel.org
-  | -rw-r--r-- 1 sluys sluys 4069 Apr 19  2021 2021-04__GentooLinux.org
-  | -rw-r--r-- 1 sluys sluys 3973 Jun 13 10:57 2021-07__Ongedierte.org
-  | -rw-r--r-- 1 sluys sluys 4908 Jul 25 16:24 2021-08__FOSSopScholen.org
-  | -rw-r--r-- 1 sluys sluys 5063 Nov  5 09:39 2021-10__TheWinMacLinuxExperience_published.org
-  | -rw-r--r-- 1 sluys sluys 4755 Dec  6 13:23 2021-12__Orgmode.org
+  | -rw-r--r-- 1 sluys sluys   8827 Dec 12 11:11 Orgmode_voorbeeld_ascii.txt
+  | -rw-r--r-- 1 sluys sluys  27250 Dec 12 11:50 Orgmode_voorbeeld.html
+  | -rw-r--r-- 1 sluys sluys   9414 Dec 12 11:59 Orgmode_voorbeeld.md
+  | -rw-r--r-- 1 sluys sluys  37244 Dec 12 12:00 Orgmode_voorbeeld.odt
+  | -rw-r--r-- 1 sluys sluys   8480 Dec 12 11:59 Orgmode_voorbeeld.org
+  | -rw-r--r-- 1 sluys sluys 308254 Dec 12 12:00 Orgmode_voorbeeld.pdf
+  | -rw-r--r-- 1 sluys sluys  23293 Dec 12 12:01 Orgmode_voorbeeld.png
+  | -rw-r--r-- 1 sluys sluys  10210 Dec 12 12:01 Orgmode_voorbeeld.rst
+  | -rw-r--r-- 1 sluys sluys  12052 Dec 12 12:00 Orgmode_voorbeeld.tex
+  | -rw-r--r-- 1 sluys sluys  10348 Dec 12 11:12 Orgmode_voorbeeld_utf8.txt
   `----
 
-
-  Gebruik awk om de filename en grootte te nemen en maak een tabel:
+  Gebruik awk om de filename en grootte te nemen van de files uit `ls'
+  en maak een tabel:
   ,----
-  | BEGIN { OFS="|" }; { print $9, $5}
+  | BEGIN { OFS="|" }; { print $5, $9}
   `----
 
-   2021-01__FOSSvsCommercieel.org                   2873 
-   2021-04__GentooLinux.org                         4069 
-   2021-07__Ongedierte.org                          3973 
-   2021-08__FOSSopScholen.org                       4908 
-   2021-10__TheWinMacLinuxExperience_published.org  5063 
-   2021-12__Orgmode.org                             4755 
+     8827  Orgmode_voorbeeld_ascii.txt 
+    27250  Orgmode_voorbeeld.html      
+     9414  Orgmode_voorbeeld.md        
+    37244  Orgmode_voorbeeld.odt       
+     8480  Orgmode_voorbeeld.org       
+   308254  Orgmode_voorbeeld.pdf       
+    23293  Orgmode_voorbeeld.png       
+    10210  Orgmode_voorbeeld.rst       
+    12052  Orgmode_voorbeeld.tex       
+    10348  Orgmode_voorbeeld_utf8.txt  
 
-  Gebruik Python om o.a. de kleinste en grootste file te vinden:
+  Gebruik Python om o.a. de kleinste en grootste file te vinden in de
+  tabel van `awk':
   ,----
   | print(table[0])                      # Eerste rij van de tabel zoals ingelezen
-  | print("Aantal columns: %i" % len(table))
-  | print("Kortste column: %s (%i b)" % tuple(min(table)))
-  | print("Langste column: %s (%i b)" % tuple(max(table)))
-  | print("Totale grootte: %0.3f kb"  % (sum([x for y,x in table]) / 1000))
+  | print("Aantal bestanden: %i"         % len(table))
+  | print("Kleinste bestand: (%i b) %s"  % tuple(min(table)))
+  | print("Grootste bestand: (%i b) %s"  % tuple(max(table)))
+  | print("Totale grootte: %0.3f kb"     % (sum([x for x,y in table]) / 1000))
   `----
 
   ,----
-  | ['2021-01__FOSSvsCommercieel.org', 2873]
-  | Aantal columns: 6
-  | Kortste column: 2021-01__FOSSvsCommercieel.org (2873 b)
-  | Langste column: 2021-12__Orgmode.org (4755 b)
-  | Totale grootte: 25.641 kb
+  | [8827, 'Orgmode_voorbeeld_ascii.txt']
+  | Aantal bestanden: 10
+  | Kleinste bestand: (8480 b) Orgmode_voorbeeld.org
+  | Grootste bestand: (308254 b) Orgmode_voorbeeld.pdf
+  | Totale grootte: 455.372 kb
   `----
