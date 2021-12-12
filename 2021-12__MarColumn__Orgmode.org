@@ -1,0 +1,29 @@
+#+title: MarColumn: Orgmode
+
+Ik wilde iets schrijven over de voordelen van platte tekst, maar kies toch voor een specifieke toepassing: Orgmode.[fn:1][fn:2]  Orgmode is een onderdeel van de teksteditor Emacs,[fn:3] die beschikbaar is in de packagemanager van de meeste besturingssystemen en die voor veel andere doelen handig is.  Orgmode is een vorm van markup en gebruikt platte tekst om je leven, werk of hobby te helpen organiseren.  Ik gebruik Orgmode voor het maken van (gestructureerde) notities (mijn persoonlijke Wiki!), het plannen van projecten, klokken van taken, bijhouden van taken- en ideeënlijsten, maar ook als mijn agenda (en meer), zowel voor mijn werk, hobby (b.v. deze column) en prive.
+
+De eerste keer Orgmode is bijna magisch.  Open een nieuwe file met extensie ~.org~ in emacs,[fn:4] typ ~Sectie 1~ en er gebeurt nog niets bijzonders.  Maar zet een (of meer) asterisk(en) (~*~) aan het begin van de regel (gevolgd door een spatie) en ineens is het een (eventueel genummerd) kopje, te herkennen aan de kleur.  ~Ctrl-ENTER~ maakt een nieuw kopje achter het huidige.  ~Shift-pijl rechts~ voegt TODO toe, dan DONE en terug naar leeg.  Zijn alle subkopjes DONE, dan wordt het hoofdkopje dat ook.  Een + of - (of * na spatie) vormt een ongenummerde lijst, 1. of 1) aan het begin van de regel een genummerde lijst.  ~Alt-ENTER~ maakt dan een nieuwe regel voor het volgende item.  Zet ~[ ]~ voor je item en het wordt een /radio button/ waarmee je ze af kunt vinken (~[X]~).  Zet ~[/]~ of ~[%]~ in het kopje erboven en het telt welk deel klaar is (b.v. ~[2/5]~ of ~[40%]~).  Met TAB vouw je kopjes of lijsten op of uit voor overzicht of juist detail.  Met ~Alt-pijl op/neer~ wissel je de volgorde van kopjes of items en met ~Alt-pijl rechts/links~ spring je in/uit.
+
+Gebruik een pipe (|) aan het begin van een regel en je tovert een tabel, die zelfs simpele spreadsheethandelingen aankan. Typ https:// en de URL wordt een actieve link die in een browser kan openen.  Tekst tussen vierkante haken is een link naar een hoofdstukje en/of een andere file, tussen dollartekens wordt het een (LaTeX-)formule, die ook opgemaakt kan worden weergegeven.  Geklokte taken kunnen worden weergegeven per dag, week of maand en per soort (werk/hobby/prive, onderwijs/onderzoek/organisatie) en project met (sub)totalen.
+
+Ik gebruik vaak een codeblok (tussen ~#+begin_src <taal>~ en ~#+end_src~) in mijn Wiki om te "onthouden" hoe bepaalde dingen te doen in een programmeertaal.  Orgmode herkent talen als Bash, Python, C en Fortran, maar ook LaTeX, html, conf, yaml en meer en gebruikt /syntax higlighting/ om de code leesbaarder te maken.  Met Babel[fn:5] wordt de code ook uitvoerbaar en kunnen de resultaten in het document worden weergegeven, als een soort Jupyter notebook.  Gekker nog, resultaten van een vorig blok kunnen worden gebruikt, waardoor je bijvoorbeeld iets kunt inlezen met bash, uitrekenen met Fortran en plotten met Python.  Dit alles in platte tekst, met de eenvoud van een paar toetsaanslagen!
+
+Is je tekst, lijst, artikel of document klaar, dan kan het (of een deel ervan) worden geëxporteerd naar o.a. platte tekst, html, md, LaTeX/PDF, odt en rST.  Ik gebruik vaak Orgmode in de brainstormfase van een artikel, met lekker veel overzicht en snelle, simpele opmaak, exporteer het dan naar LaTeX en werk het vervolgens uit.  Met de publicatiemogelijkheid kun je uit een set Orgmode files een website bijhouden.  Sites als GitLab en GitHub ondersteunen Orgmode, zodat je 'ruwe' files in een repository kunt zetten om ze te delen met de wereld (al is een export naar html of markdown iets fraaier).
+
+Doordat alles platte tekst is, is het gemakkelijk zelf te 'hacken'.  Naast tools als grep, diff en git heb ik weinig moeite (en bestaande libraries) een Pythonscript gemaakt dat via cron elk uur GitHub issues en emails in de folder "Todo" aan de todolist in mijn agenda toevoegt.  Een ander script toont een popup bij afspraken.  Verder is vrijwel alles configurabel.  Naast TODO (rood) en DONE (groen) heb ik ACTIVE en WAITING (paars/oranje) toegevoegd en voor bugs gebruik ik zelfgedefinieerde OPEN/ASSIGNED/CLOSED tags.  Ook heb ik liever genummerde kopjes en laat ik ze inspringen in plaats van het tonen van meerdere asterisken.
+
+Orgmode is verbazingwekkend doordat het in al zijn eenvoud een bijna ongelimiteerde potentie heeft.  Omdat de ruimte hier te beperkt is voor een betere eerste indruk, heb ik een voorbeeld op GitHub geplaatst.[fn:6] Ik zal mijn best doen om eventuele vragen via de NLLGG-mailinglist te beantwoorden.  Fijne feestdagen!
+
+* Footnotes
+
+[fn:1] https://orgmode.org/
+
+[fn:2] Het resultaat is meer een MarTorial geworden dan een MarColumn, maar hierdoor heeft u wellicht iets nieuws om uit te zoeken rond de feestdagen.
+
+[fn:3] https://www.gnu.org/software/emacs/
+
+[fn:4] Zie eventueel http://pub.vandersluys.nl/download/GettingStartedWithEmacs.pdf
+
+[fn:5] https://orgmode.org/worg/org-contrib/babel/
+
+[fn:6] https://github.com/MarcvdSluys/NLLGG-docs/tree/master/Orgmode_voorbeeld

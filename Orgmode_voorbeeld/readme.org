@@ -27,4 +27,8 @@ en kijken wat er gebeurt, of alles toevoegen en uitcommenteren (~;;~) wat niet w
 niet alles in een keer, doordat voor sommige opties externe software (b.v. emacs-packages) nodig is, en ik te
 lui was dit uit te zoeken.  Wel heb ik geprobeerd de commentaarregels wat duidelijker te maken.
 
+* Links naar meer informatie
+1. Pagina voor absolute beginners: https://orgmode.org/worg/org-tutorials/org4beginners.html
+2. Tutorials, met bovenaan een serie video's waar u de magie zelf kunt zien gebeuren:
+   https://orgmode.org/worg/org-tutorials/
 
