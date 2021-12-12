@@ -4,7 +4,14 @@ Voorbeeld van een Orgmode file met exports en instellingen voor emacs.
 
 ** Bronbestand
 
-Het bronbestand is de Orgmode file (~.org~).
+Het bronbestand is de Orgmode file (~Orgmode_voorbeeld.org~).  Je kunt dit downloaden en openen met emacs, dat
+als het goed is ~org-mode~ start vanwege de extensie van de file (~.org~).
+
+Vanuit een bash shell is dat:
+#+begin_src bash
+  wget https://raw.githubusercontent.com/MarcvdSluys/NLLGG-docs/master/Orgmode_voorbeeld/Orgmode_voorbeeld.org
+  emacs Orgmode_voorbeeld.org &
+#+end_src
 
 
 ** Exports
