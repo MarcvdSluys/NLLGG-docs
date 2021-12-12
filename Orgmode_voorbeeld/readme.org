@@ -4,7 +4,7 @@ Voorbeeld van een Orgmode file met exports en instellingen voor emacs.
 
 ** Bronbestand
 
-Het bronbestand is de Orgmode file (~.org~)
+Het bronbestand is de Orgmode file (~.org~).
 
 
 ** Exports
