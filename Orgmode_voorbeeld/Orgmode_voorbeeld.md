@@ -1,16 +1,18 @@
-- [Toetsaanslagen](#orgfbabe41)
-- [Te doen <code>[1/2]</code>](#org42db647)
-  - [MarColumn december schrijven <code>[6/6]</code>](#org42c460a)
-  - [File met voorbeelden toevoegen <code>[4/5]</code>](#org5c58935)
-    - [Takenlijst <code>[37%]</code>](#org6141d9f)
-    - [Links](#orge75df8a)
-    - [Tabel/spreadsheet](#orgc10c700)
-    - [Formule](#org08ffef7)
-    - [Code](#org8276de2)
+- [Toetsaanslagen](#orgfef187c)
+- [Te doen <code>[1/3]</code>](#org75f2258)
+  - [MarColumn december schrijven <code>[6/6]</code>](#orgcb3239f)
+  - [File met eenvoudige voorbeelden toevoegen <code>[5/6]</code>](#org9688a10)
+    - [Tekststijl](#org02cc5dc)
+    - [Takenlijst en kopjes <code>[33%]</code>](#org8671514)
+    - [Links](#org13130a1)
+    - [Tabel/spreadsheet](#org5d165a6)
+  - [Meer geavanceerde voorbeelden](#org823a287)
+    - [Formule](#org6df4ba3)
+    - [Code](#orgc35766d)
 
 
 
-<a id="orgfbabe41"></a>
+<a id="orgfef187c"></a>
 
 # Toetsaanslagen
 
@@ -22,12 +24,12 @@
 5.  Zie ook <http://pub.vandersluys.nl/download/GettingStartedWithEmacs.pdf> (met name sectie 1.2 en het begin van 1.3)
 
 
-<a id="org42db647"></a>
+<a id="org75f2258"></a>
 
-# TODO Te doen <code>[1/2]</code>
+# TODO Te doen <code>[1/3]</code>
 
 
-<a id="org42c460a"></a>
+<a id="orgcb3239f"></a>
 
 ## DONE MarColumn december schrijven <code>[6/6]</code>
 
@@ -39,18 +41,29 @@
 6.  [X] code, formules
 
 
-<a id="org5c58935"></a>
+<a id="org9688a10"></a>
 
-## TODO File met voorbeelden toevoegen <code>[4/5]</code>
+## PROGRESS File met eenvoudige voorbeelden toevoegen <code>[5/6]</code>
 
 
-<a id="org6141d9f"></a>
+<a id="org02cc5dc"></a>
 
-### DONE Takenlijst <code>[37%]</code>
+### DONE Tekststijl
 
--   [X] Zie [2](#org42db647)
+-   **vet**
+-   *cursief*
+-   <span class="underline">onderlijnd</span>
+-   ~~doorgehaald~~
+-   `code` of `vebatim`
+
+
+<a id="org8671514"></a>
+
+### DONE Takenlijst en kopjes <code>[33%]</code>
+
+-   [X] Zie [2](#org75f2258)
 -   [X] inspringen:
-    -   zet de cursor op een item en typ `Alt-pijl rechts/links`
+    -   zet de cursor op een item (b.v. in deze lijst) en typ `Alt-pijl rechts/links`
     -   hetzelfde voor kopjes
 -   [ ] slepen:
     -   zet de cursor op een item en typ `Alt-pijl op/neer`
@@ -69,18 +82,33 @@
     -   `Alt-ENTER`
 -   [ ] Nieuw kopje:
     -   `Ctrl-ENTER`
+-   [ ] Nieuwe lijst maken
+    1.  Genummerd:
+        1.  typ een `1.` of `1)` gevolgd door een spatie en de omschrijving
+        2.  typ `Alt-ENTER` voor het volgende item (telt automatisch door)
+    2.  Ongenummerd:
+        1.  typ een `+`, `-` of (indien subitem) `*` gevolgd door een spatie en de omschrijving
+        2.  typ `Alt-ENTER` voor het volgende item met hetzelfde symbool
+    3.  Definitie:
+        -   **Definitie:** een definitie is een **ongenummerd** item met een keyword, gevolgd door een dubbele dubbele punt (`::`) en de definitie.
+        -   `Alt-ENTER` vraagt om de volgende definitie met hetzelfde symbool
+    4.  Vink (*radio button*):
+        1.  typ een item symbool of nummer, gevolgd door een spatie, `[ ]`, weer een spatie en de omschrijving
+        2.  de `[ ]` licht op ten teken dat de *radio button* actief is
+        3.  `Alt-ENTER` geeft een nieuw item, maar **geen** lege radio button (bug?)
+        4.  `C-c C-c` op de regel switcht tussen `[ ]` en `[X]`
 
 
-<a id="orge75df8a"></a>
+<a id="org13130a1"></a>
 
 ### DONE Links
 
--   Interne link: zie [2](#org42db647)
+-   Interne link: zie [2](#org75f2258)
 -   Externe link: <https://github.com/MarcvdSluys/NLLGG-docs>
 -   Externe link met onschrijving: [NLLGG docs](https://github.com/MarcvdSluys/NLLGG-docs)
 
 
-<a id="orgc10c700"></a>
+<a id="org5d165a6"></a>
 
 ### DONE Tabel/spreadsheet
 
@@ -100,22 +128,27 @@
 | 5 | 25            | 125           |
 
 
-<a id="org08ffef7"></a>
+<a id="org823a287"></a>
+
+## PROGRESS Meer geavanceerde voorbeelden
+
+
+<a id="org6df4ba3"></a>
 
 ### DONE Formule
 
 LaTeX moet geinstalleerd zijn&#x2026;
 
-1.  inline: typ `$\int_0^\infty \frac{\sin x}{x} dx$` en druk `Ctrl-C Ctrl-X Ctrl-L` Dit is een mooie formule $\int_0^\infty \frac{\sin x}{x} dx$, maar wel ingewikkeld.
+1.  inline: typ `$\int_0^\infty \frac{\sin x}{x} dx$` en druk `C-c C-x C-l` Dit is een mooie formule $\int_0^\infty \frac{\sin x}{x} dx$, maar wel ingewikkeld.
 
-2.  tussen de tekst: typ `\[\int_0^\infty \frac{\sin x}{x} dx\]` en druk `Ctrl-C Ctrl-X Ctrl-L` $$\int_0^\infty \frac{\sin x}{x} dx$$
+2.  tussen de tekst: typ `\[\int_0^\infty \frac{\sin x}{x} dx\]` en druk `C-c C-x C-l` $$\int_0^\infty \frac{\sin x}{x} dx$$
 
 
-<a id="org8276de2"></a>
+<a id="orgc35766d"></a>
 
 ### ACTIVE Code
 
-Werkt altijd?
+-   Elisp werkt altijd?
 
 1.  Elisp (emacs lisp script)
 
@@ -128,6 +161,10 @@ Werkt altijd?
     (concat  (emacs-version)
     	 "\nOrgmode " (org-version))  
     ```
+    
+        GNU Emacs 27.2 (build 1, x86_64-pc-linux-gnu, GTK+ Version 3.24.29, cairo version 1.16.0)
+         of 2021-10-01
+        Orgmode N/A
 
 2.  Bash
 
@@ -136,6 +173,8 @@ Werkt altijd?
     ```bash
     echo "Mijn homedirectory is $HOME"
     ```
+    
+        Mijn homedirectory is /home/sluys
 
 3.  Python
 
@@ -153,31 +192,35 @@ Werkt altijd?
     return z
     ```
     
+        12
+    
     ```python
     import numpy as np
     import matplotlib.pyplot as plt
     x = np.linspace(-15,15)
     plt.plot(x, np.sin(x)/x)
-    plt.savefig('2021-12__Orgmode_voorbeeld.png')
-    return '2021-12__Orgmode_voorbeeld.png'  # Return filename to orgmode
+    plt.savefig('Orgmode_voorbeeld.png')
+    return 'Orgmode_voorbeeld.png'  # Return filename to orgmode
     ```
     
-    ![img](2021-12__Orgmode_voorbeeld.png)
+    ![img](Orgmode_voorbeeld.png)
 
 4.  Python + Bash
 
     -   Hier gejat: <https://jherrlin.github.io/posts/emacs-orgmode-source-code-blocks/>
     
-    Print een lijst met .org files van voor oktober in de huidige directory in bash. Ik wil zowel (`both`) de code als het resultaat exporteren (naar bijvoorbeeld .md of .pdf). En ik geef de code een naam (`ls`) zodat de output hieronder gebruikt kan worden:
+    Print een lijst met .org files van dit jaar in de huidige directory in bash. Ik wil zowel (`both`) de code als het resultaat exporteren (naar bijvoorbeeld .md of .pdf). En ik geef de code een naam (`ls`) zodat de output hieronder gebruikt kan worden:
     
     ```bash
-    ls -la 2021-0*.org
+    ls -l 2021-*.org | grep -v Orgmode_voorbeeld
     ```
     
         -rw-r--r-- 1 sluys sluys 2873 Jan 17  2021 2021-01__FOSSvsCommercieel.org
         -rw-r--r-- 1 sluys sluys 4069 Apr 19  2021 2021-04__GentooLinux.org
         -rw-r--r-- 1 sluys sluys 3973 Jun 13 10:57 2021-07__Ongedierte.org
         -rw-r--r-- 1 sluys sluys 4908 Jul 25 16:24 2021-08__FOSSopScholen.org
+        -rw-r--r-- 1 sluys sluys 5063 Nov  5 09:39 2021-10__TheWinMacLinuxExperience_published.org
+        -rw-r--r-- 1 sluys sluys 4755 Dec  6 13:23 2021-12__Orgmode.org
     
     Gebruik awk om de filename en grootte te nemen en maak een tabel:
     
@@ -185,10 +228,12 @@ Werkt altijd?
     BEGIN { OFS="|" }; { print $9, $5}
     ```
     
-    | 2021-01\_<sub>FOSSvsCommercieel.org</sub> | 2873 |
-    | 2021-04\_<sub>GentooLinux.org</sub>       | 4069 |
-    | 2021-07\_<sub>Ongedierte.org</sub>        | 3973 |
-    | 2021-08\_<sub>FOSSopScholen.org</sub>     | 4908 |
+    | 2021-01\_<sub>FOSSvsCommercieel.org</sub>                            | 2873 |
+    | 2021-04\_<sub>GentooLinux.org</sub>                                  | 4069 |
+    | 2021-07\_<sub>Ongedierte.org</sub>                                   | 3973 |
+    | 2021-08\_<sub>FOSSopScholen.org</sub>                                | 4908 |
+    | 2021-10\_<sub>TheWinMacLinuxExperience</sub><sub>published.org</sub> | 5063 |
+    | 2021-12\_<sub>Orgmode.org</sub>                                      | 4755 |
     
     Gebruik Python om o.a. de kleinste en grootste file te vinden:
     
@@ -201,7 +246,7 @@ Werkt altijd?
     ```
     
         ['2021-01__FOSSvsCommercieel.org', 2873]
-        Aantal columns: 4
+        Aantal columns: 6
         Kortste column: 2021-01__FOSSvsCommercieel.org (2873 b)
-        Langste column: 2021-08__FOSSopScholen.org (4908 b)
-        Totale grootte: 15.823 kb
+        Langste column: 2021-12__Orgmode.org (4755 b)
+        Totale grootte: 25.641 kb

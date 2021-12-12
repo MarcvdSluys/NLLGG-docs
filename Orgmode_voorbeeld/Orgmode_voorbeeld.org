@@ -1,6 +1,7 @@
 #+title: Orgmode voorbeeld
 
 * Toetsaanslagen
+
 1. Ik gebruik kleine letter ~a~ voor de ~A~-toets.
 2. Ik gebruik hoofdletters ~C-~ voor de ~Ctrl~-toets, ~M-~ voor de Alt (meta)-toets en ~S-~ voor de
    ~Shift~-toets.
@@ -11,7 +12,7 @@
 5. Zie ook http://pub.vandersluys.nl/download/GettingStartedWithEmacs.pdf (met name sectie 1.2 en het begin
    van 1.3)
 
-* TODO Te doen [1/2]
+* TODO Te doen [1/3]
 ** DONE MarColumn december schrijven [6/6]
 CLOSED: [2021-12-05 Sun 10:45]
 1) [X] klokken taken, projecten
@@ -21,12 +22,20 @@ CLOSED: [2021-12-05 Sun 10:45]
 5) [X] export, publish: plain text, html, md, LaTeX/PDF, odt, rST, ...
 6) [X] code, formules
   
-** TODO File met voorbeelden toevoegen [4/5]
-*** DONE Takenlijst [37%]
+** PROGRESS File met eenvoudige voorbeelden toevoegen [5/6]
+*** DONE Tekststijl
+CLOSED: [2021-12-05 Sun 13:29]
++ *vet*
++ /cursief/
++ _onderlijnd_
++ +doorgehaald+
++ ~code~ of =vebatim=
+
+*** DONE Takenlijst en kopjes [33%]
 CLOSED: [2021-12-05 Sun 10:52]
 + [X] Zie [[Te doen]]
 + [X] inspringen:
-  - zet de cursor op een item en typ ~Alt-pijl rechts/links~
+  - zet de cursor op een item (b.v. in deze lijst) en typ ~Alt-pijl rechts/links~
   - hetzelfde voor kopjes
 + [ ] slepen:
   - zet de cursor op een item en typ ~Alt-pijl op/neer~
@@ -45,8 +54,23 @@ CLOSED: [2021-12-05 Sun 10:52]
   - ~Alt-ENTER~
 + [ ] Nieuw kopje:
   - ~Ctrl-ENTER~
++ [ ] Nieuwe lijst maken
+  1) Genummerd:
+     1. typ een ~1.~ of ~1)~ gevolgd door een spatie en de omschrijving
+     2. typ ~Alt-ENTER~ voor het volgende item (telt automatisch door)
+  2) Ongenummerd:
+     1. typ een ~+~, ~-~ of (indien subitem) ~*~ gevolgd door een spatie en de omschrijving
+     2. typ ~Alt-ENTER~ voor het volgende item met hetzelfde symbool
+  3) Definitie:
+     + Definitie ::  een definitie is een *ongenummerd* item met een keyword, gevolgd door een dubbele dubbele
+       punt (~::~) en de definitie.
+     + ~Alt-ENTER~ vraagt om de volgende definitie met hetzelfde symbool
+  4) Vink (/radio button/):
+     1. typ een item symbool of nummer, gevolgd door een spatie, ~[ ]~, weer een spatie en de omschrijving
+     2. de ~[ ]~ licht op ten teken dat de /radio button/ actief is
+     3. ~Alt-ENTER~ geeft een nieuw item, maar *geen* lege radio button (bug?)
+     4. ~C-c C-c~ op de regel switcht tussen ~[ ]~ en ~[X]~
   
-
 *** DONE Links
 CLOSED: [2021-12-05 Sun 10:53]
 + Interne link: zie [[Te doen]]
@@ -74,41 +98,42 @@ CLOSED: [2021-12-05 Sun 11:40]
 |---+-----+-----|
 #+TBLFM: $2=$1**2::$3=$1**3
 
-
+** PROGRESS Meer geavanceerde voorbeelden
 *** DONE Formule
 CLOSED: [2021-12-05 Sun 11:42]
 LaTeX moet geinstalleerd zijn...
 
-1. inline: typ ~$\int_0^\infty \frac{\sin x}{x} dx$~ en druk ~Ctrl-C Ctrl-X Ctrl-L~
+1. inline: typ ~$\int_0^\infty \frac{\sin x}{x} dx$~ en druk ~C-c C-x C-l~
   Dit is een mooie formule $\int_0^\infty \frac{\sin x}{x} dx$, maar wel ingewikkeld.
    
-2. tussen de tekst: typ ~\[\int_0^\infty \frac{\sin x}{x} dx\]~ en druk ~Ctrl-C Ctrl-X Ctrl-L~
+2. tussen de tekst: typ ~\[\int_0^\infty \frac{\sin x}{x} dx\]~ en druk ~C-c C-x C-l~
    \[\int_0^\infty \frac{\sin x}{x} dx\]
    
 *** ACTIVE Code
-Werkt altijd?
++ Elisp werkt altijd?
+  
 **** Elisp (emacs lisp script)
 1. Typ ~C-c C-, s~ voor een ~#+begin/end_src~-block en voeg zelf ~elisp~ toe
 2. Typ wat code en return een waarde
 3. In het codeblok, typ ~C-c C-c~ en beantwoord de vraag onderin met ~yes ENTER~
 4. Het resultaat verschijnt in een ~RESULTS~-blok onder de code.
-#+begin_src elisp
+#+begin_src elisp :exports both
   (concat  (emacs-version)
            "\nOrgmode " (org-version))  
 #+end_src
 
-#+RESULTS:
+#+results:
 : GNU Emacs 27.2 (build 1, x86_64-pc-linux-gnu, GTK+ Version 3.24.29, cairo version 1.16.0)
 :  of 2021-10-01
 : Orgmode N/A
 
 **** Bash
 Bash moet geinstalleerd zijn en Babel moet geactiveerd zijn voor Bash...
-#+begin_src bash
+#+begin_src bash :exports both
   echo "Mijn homedirectory is $HOME"
 #+end_src
 
-#+RESULTS:
+#+results:
 : Mijn homedirectory is /home/sluys
 
 **** Python
@@ -119,14 +144,14 @@ Python moet geinstalleerd zijn en Babel moet geactiveerd zijn voor Python...
 3. In het codeblok, typ ~C-c C-c~ en beantwoord de vraag onderin met ~yes ENTER~
 4. De returnwaarde verschijnt onder de code in
 #+name: som   
-#+begin_src python
+#+begin_src python :exports both
   x=3
   y=4
   z=x*y
   return z
 #+end_src
 
-#+RESULTS: som
+#+results: som
 : 12
 
 
@@ -135,29 +160,31 @@ Python moet geinstalleerd zijn en Babel moet geactiveerd zijn voor Python...
   import matplotlib.pyplot as plt
   x = np.linspace(-15,15)
   plt.plot(x, np.sin(x)/x)
-  plt.savefig('2021-12__Orgmode_voorbeeld.png')
-  return '2021-12__Orgmode_voorbeeld.png'  # Return filename to orgmode
+  plt.savefig('Orgmode_voorbeeld.png')
+  return 'Orgmode_voorbeeld.png'  # Return filename to orgmode
 #+end_src
 
-#+RESULTS:
-[[file:2021-12__Orgmode_voorbeeld.png]]
+#+results:
+[[file:Orgmode_voorbeeld.png]]
 
 **** Python + Bash
 + Hier gejat: https://jherrlin.github.io/posts/emacs-orgmode-source-code-blocks/
 
-Print een lijst met .org files van voor oktober in de huidige directory in bash.  Ik wil zowel (~both~) de
-code als het resultaat exporteren (naar bijvoorbeeld .md of .pdf).  En ik geef de code een naam (~ls~) zodat
-de output hieronder gebruikt kan worden:
+Print een lijst met .org files van dit jaar in de huidige directory in bash.  Ik wil zowel (~both~) de code
+als het resultaat exporteren (naar bijvoorbeeld .md of .pdf).  En ik geef de code een naam (~ls~) zodat de
+output hieronder gebruikt kan worden:
 #+name: ls
 #+begin_src bash :dir . :results output :exports both
-  ls -la 2021-0*.org
+  ls -l 2021-*.org | grep -v Orgmode_voorbeeld
 #+end_src
 
-#+RESULTS: ls
+#+results: ls
 : -rw-r--r-- 1 sluys sluys 2873 Jan 17  2021 2021-01__FOSSvsCommercieel.org
 : -rw-r--r-- 1 sluys sluys 4069 Apr 19  2021 2021-04__GentooLinux.org
 : -rw-r--r-- 1 sluys sluys 3973 Jun 13 10:57 2021-07__Ongedierte.org
 : -rw-r--r-- 1 sluys sluys 4908 Jul 25 16:24 2021-08__FOSSopScholen.org
+: -rw-r--r-- 1 sluys sluys 5063 Nov  5 09:39 2021-10__TheWinMacLinuxExperience_published.org
+: -rw-r--r-- 1 sluys sluys 4646 Dec  6 11:11 2021-12__Orgmode.org
 
 Gebruik awk om de filename en grootte te nemen en maak een tabel:
 #+name: awk
@@ -165,11 +192,13 @@ Gebruik awk om de filename en grootte te nemen en maak een tabel:
   BEGIN { OFS="|" }; { print $9, $5}
 #+end_SRC
 
-#+RESULTS: awk
-| 2873 | 2021-01__FOSSvsCommercieel.org |
-| 4069 | 2021-04__GentooLinux.org       |
-| 3973 | 2021-07__Ongedierte.org        |
-| 4908 | 2021-08__FOSSopScholen.org     |
+#+results: awk
+| 2021-01__FOSSvsCommercieel.org                  | 2873 |
+| 2021-04__GentooLinux.org                        | 4069 |
+| 2021-07__Ongedierte.org                         | 3973 |
+| 2021-08__FOSSopScholen.org                      | 4908 |
+| 2021-10__TheWinMacLinuxExperience_published.org | 5063 |
+| 2021-12__Orgmode.org                            | 4646 |
 
 Gebruik Python om o.a. de kleinste en grootste file te vinden:
 #+begin_src python :results output :var table=awk :exports both
@@ -180,9 +209,9 @@ Gebruik Python om o.a. de kleinste en grootste file te vinden:
   print("Totale grootte: %0.3f kb"  % (sum([x for y,x in table]) / 1000))
 #+end_src
 
-#+RESULTS:
-: [['2021-01__FOSSvsCommercieel.org', 2873], ['2021-04__GentooLinux.org', 4069], ['2021-07__Ongedierte.org', 3973], ['2021-08__FOSSopScholen.org', 4908]]
-: Aantal columns: 4
+#+results:
+: ['2021-01__FOSSvsCommercieel.org', 2873]
+: Aantal columns: 6
 : Kortste column: 2021-01__FOSSvsCommercieel.org (2873 b)
-: Langste column: 2021-08__FOSSopScholen.org (4908 b)
-: Totale grootte: 15.823 kb
+: Langste column: 2021-12__Orgmode.org (4646 b)
+: Totale grootte: 25.532 kb

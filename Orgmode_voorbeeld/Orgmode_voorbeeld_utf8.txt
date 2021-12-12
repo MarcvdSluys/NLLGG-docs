@@ -1,0 +1,301 @@
+                          ━━━━━━━━━━━━━━━━━━━━
+                           ORGMODE VOORBEELD
+
+                           Marc van der Sluys
+                          ━━━━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Toetsaanslagen
+2. TODO Te doen [1/3]
+.. 1. DONE MarColumn december schrijven [6/6]
+.. 2. PROGRESS File met eenvoudige voorbeelden toevoegen [5/6]
+..... 1. DONE Tekststijl
+..... 2. DONE Takenlijst en kopjes [33%]
+..... 3. DONE Links
+..... 4. DONE Tabel/spreadsheet
+.. 3. PROGRESS Meer geavanceerde voorbeelden
+..... 1. DONE Formule
+..... 2. ACTIVE Code
+
+
+
+
+
+1 Toetsaanslagen
+════════════════
+
+  1. Ik gebruik kleine letter `a' voor de `A'-toets.
+  2. Ik gebruik hoofdletters `C-' voor de `Ctrl'-toets, `M-' voor de Alt
+     (meta)-toets en `S-' voor de `Shift'-toets.
+     ⁃ `C-c' is dus `Ctrl-C', `C-c C-c' is dat tweemaal en `C-M-a' is
+       gelijktijdig `Ctrl', `Alt' en `A' indrukken.
+  3. `ENTER', `TAB' en `ESC' zijn de toetsen die je verwacht.
+  4. Raak je verstrikt?  Druk `ESC ESC ESC ESC' en je kunt weer typen.
+  5. Zie ook
+     <http://pub.vandersluys.nl/download/GettingStartedWithEmacs.pdf>
+     (met name sectie 1.2 en het begin van 1.3)
+
+
+2 TODO Te doen [1/3]
+════════════════════
+
+2.1 DONE MarColumn december schrijven [6/6]
+───────────────────────────────────────────
+
+  1) ☑ klokken taken, projecten
+  2) ☑ agenda, plannen, takenlijsten (TODO/DONE, OPEN/CLOSED),
+     ideeenlijsten
+  3) ☑ (interne) links
+  4) ☑ tabellen, simpele spreadsheets
+  5) ☑ export, publish: plain text, html, md, LaTeX/PDF, odt, rST, …
+  6) ☑ code, formules
+
+
+2.2 PROGRESS File met eenvoudige voorbeelden toevoegen [5/6]
+────────────────────────────────────────────────────────────
+
+2.2.1 DONE Tekststijl
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ⁃ *vet*
+  ⁃ /cursief/
+  ⁃ _onderlijnd_
+  ⁃ +doorgehaald+
+  ⁃ `code' of `vebatim'
+
+
+2.2.2 DONE Takenlijst en kopjes [33%]
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ⁃ ☑ Zie 2
+  ⁃ ☑ inspringen:
+    • zet de cursor op een item (b.v. in deze lijst) en typ `Alt-pijl
+      rechts/links'
+    • hetzelfde voor kopjes
+  ⁃ ☐ slepen:
+    • zet de cursor op een item en typ `Alt-pijl op/neer'
+    • op/neer wisselt voor een item (met dezelfde indentatie en indien
+      mogelijk)
+    • hetzelfde voor kopjes (van hetzelfde level)
+  ⁃ ☐ lijstsymbool veranderen:
+    • zet de cursor op een item en typ `Shift rechts/links'
+    • symbolen springen van tussen `+/-/*/1./1)' (`*' indien mogelijk)
+  ⁃ ☑ item aan/uitvinken:
+    • zet de cursor op het item en typ `C-c C-c'
+    • het aantal of percentage in het kopje erboven (gemaakt door
+      `[/]' of `[%]' te typen) verandert mee
+  ⁃ ☐ TODO veranderen:
+    • zet de cursor op een kopje en typ `Shift rechts/links'
+    • als alle subkopjes DONE zijn, wordt het hogere kopje dat ook
+      (mits er TODO staat)
+  ⁃ ☐ Nieuw item:
+    • `Alt-ENTER'
+  ⁃ ☐ Nieuw kopje:
+    • `Ctrl-ENTER'
+  ⁃ ☐ Nieuwe lijst maken
+    1) Genummerd:
+       1. typ een `1.' of `1)' gevolgd door een spatie en de
+          omschrijving
+       2. typ `Alt-ENTER' voor het volgende item (telt automatisch
+          door)
+    2) Ongenummerd:
+       1. typ een `+', `-' of (indien subitem) `*' gevolgd door een
+          spatie en de omschrijving
+       2. typ `Alt-ENTER' voor het volgende item met hetzelfde symbool
+    3) Definitie:
+       Definitie
+             een definitie is een *ongenummerd* item met een keyword,
+             gevolgd door een dubbele dubbele punt (`::') en de
+             definitie.
+
+             `Alt-ENTER' vraagt om de volgende definitie met hetzelfde
+             symbool
+    4) Vink (/radio button/):
+       1. typ een item symbool of nummer, gevolgd door een spatie, `[
+          ]', weer een spatie en de omschrijving
+       2. de `[ ]' licht op ten teken dat de /radio button/ actief is
+       3. `Alt-ENTER' geeft een nieuw item, maar *geen* lege radio
+          button (bug?)
+       4. `C-c C-c' op de regel switcht tussen `[ ]' en `[X]'
+
+
+2.2.3 DONE Links
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ⁃ Interne link: zie 2
+  ⁃ Externe link: <https://github.com/MarcvdSluys/NLLGG-docs>
+  ⁃ Externe link met onschrijving: [NLLGG docs]
+
+
+[NLLGG docs] <https://github.com/MarcvdSluys/NLLGG-docs>
+
+
+2.2.4 DONE Tabel/spreadsheet
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  1. typ `|- TAB' voor een horizontale lijn
+  2. typ `x|x^2|x^3 TAB' in de nieuwe regel voor de header
+  3. typ `-' rechts tegen de `|' voor nog een lijn
+  4. in de linker kolom, typ `1 ENTER 2 ENTER' etc.
+  5. onder x^2, typ `=$1**2 TAB'.  `$1' staat voor kolom 1.
+  6. onder x^3, typ `=$1**3 TAB'
+  7. ga naar de regel met `TBLFM' (tabelformule) onder de tabel en typ
+     `C-c C-c'
+
+  ━━━━━━━━━━━━━
+   x  x^2  x^3 
+  ─────────────
+   1    1    1 
+   2    4    8 
+   3    9   27 
+   4   16   64 
+   5   25  125 
+  ━━━━━━━━━━━━━
+
+
+2.3 PROGRESS Meer geavanceerde voorbeelden
+──────────────────────────────────────────
+
+2.3.1 DONE Formule
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  LaTeX moet geinstalleerd zijn…
+
+  1. inline: typ `$\int_0^\infty \frac{\sin x}{x} dx$' en druk `C-c C-x
+     C-l' Dit is een mooie formule $\int_0^\infty \frac{\sin x}{x} dx$,
+     maar wel ingewikkeld.
+
+  2. tussen de tekst: typ `\[\int_0^\infty \frac{\sin x}{x} dx\]' en
+     druk `C-c C-x C-l' \[\int_0^\infty \frac{\sin x}{x} dx\]
+
+
+2.3.2 ACTIVE Code
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ⁃ Elisp werkt altijd?
+
+
+◊ 2.3.2.1 Elisp (emacs lisp script)
+
+  1. Typ `C-c C-, s' voor een `#+begin/end_src'-block en voeg zelf
+     `elisp' toe
+  2. Typ wat code en return een waarde
+  3. In het codeblok, typ `C-c C-c' en beantwoord de vraag onderin met
+     `yes ENTER'
+  4. Het resultaat verschijnt in een `RESULTS'-blok onder de code.
+  ┌────
+  │ (concat  (emacs-version)
+  │ 	 "\nOrgmode " (org-version))  
+  └────
+
+  ┌────
+  │ GNU Emacs 27.2 (build 1, x86_64-pc-linux-gnu, GTK+ Version 3.24.29, cairo version 1.16.0)
+  │  of 2021-10-01
+  │ Orgmode N/A
+  └────
+
+
+◊ 2.3.2.2 Bash
+
+  Bash moet geinstalleerd zijn en Babel moet geactiveerd zijn voor Bash…
+  ┌────
+  │ echo "Mijn homedirectory is $HOME"
+  └────
+
+  ┌────
+  │ Mijn homedirectory is /home/sluys
+  └────
+
+
+◊ 2.3.2.3 Python
+
+  Python moet geinstalleerd zijn en Babel moet geactiveerd zijn voor
+  Python…
+
+  1. Typ `C-c C-, s' voor een `#+begin/end_src'-block en voeg zelf
+     `python' toe
+  2. Typ wat code en return een waarde
+  3. In het codeblok, typ `C-c C-c' en beantwoord de vraag onderin met
+     `yes ENTER'
+  4. De returnwaarde verschijnt onder de code in
+  ┌────
+  │ x=3
+  │ y=4
+  │ z=x*y
+  │ return z
+  └────
+
+  ┌────
+  │ 12
+  └────
+
+
+
+  ┌────
+  │ import numpy as np
+  │ import matplotlib.pyplot as plt
+  │ x = np.linspace(-15,15)
+  │ plt.plot(x, np.sin(x)/x)
+  │ plt.savefig('Orgmode_voorbeeld.png')
+  │ return 'Orgmode_voorbeeld.png'  # Return filename to orgmode
+  └────
+
+  <file:Orgmode_voorbeeld.png>
+
+
+◊ 2.3.2.4 Python + Bash
+
+  ⁃ Hier gejat:
+    <https://jherrlin.github.io/posts/emacs-orgmode-source-code-blocks/>
+
+  Print een lijst met .org files van dit jaar in de huidige directory in
+  bash.  Ik wil zowel (`both') de code als het resultaat exporteren
+  (naar bijvoorbeeld .md of .pdf).  En ik geef de code een naam (`ls')
+  zodat de output hieronder gebruikt kan worden:
+  ┌────
+  │ ls -l 2021-*.org | grep -v Orgmode_voorbeeld
+  └────
+
+  ┌────
+  │ -rw-r--r-- 1 sluys sluys 2873 Jan 17  2021 2021-01__FOSSvsCommercieel.org
+  │ -rw-r--r-- 1 sluys sluys 4069 Apr 19  2021 2021-04__GentooLinux.org
+  │ -rw-r--r-- 1 sluys sluys 3973 Jun 13 10:57 2021-07__Ongedierte.org
+  │ -rw-r--r-- 1 sluys sluys 4908 Jul 25 16:24 2021-08__FOSSopScholen.org
+  │ -rw-r--r-- 1 sluys sluys 5063 Nov  5 09:39 2021-10__TheWinMacLinuxExperience_published.org
+  │ -rw-r--r-- 1 sluys sluys 4755 Dec  6 13:23 2021-12__Orgmode.org
+  └────
+
+
+  Gebruik awk om de filename en grootte te nemen en maak een tabel:
+  ┌────
+  │ BEGIN { OFS="|" }; { print $9, $5}
+  └────
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   2021-01__FOSSvsCommercieel.org                   2873 
+   2021-04__GentooLinux.org                         4069 
+   2021-07__Ongedierte.org                          3973 
+   2021-08__FOSSopScholen.org                       4908 
+   2021-10__TheWinMacLinuxExperience_published.org  5063 
+   2021-12__Orgmode.org                             4755 
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Gebruik Python om o.a. de kleinste en grootste file te vinden:
+  ┌────
+  │ print(table[0])                      # Eerste rij van de tabel zoals ingelezen
+  │ print("Aantal columns: %i" % len(table))
+  │ print("Kortste column: %s (%i b)" % tuple(min(table)))
+  │ print("Langste column: %s (%i b)" % tuple(max(table)))
+  │ print("Totale grootte: %0.3f kb"  % (sum([x for y,x in table]) / 1000))
+  └────
+
+  ┌────
+  │ ['2021-01__FOSSvsCommercieel.org', 2873]
+  │ Aantal columns: 6
+  │ Kortste column: 2021-01__FOSSvsCommercieel.org (2873 b)
+  │ Langste column: 2021-12__Orgmode.org (4755 b)
+  │ Totale grootte: 25.641 kb
+  └────

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-12-12 Sun 11:08 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Orgmode voorbeeld</title>
+<meta name="author" content="Marc van der Sluys" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Orgmode voorbeeld</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org09426f9">1. Toetsaanslagen</a></li>
+<li><a href="#org058caf3">2. <span class="todo TODO">TODO</span> Te doen <code>[1/3]</code></a>
+<ul>
+<li><a href="#org13c5636">2.1. <span class="done DONE">DONE</span> MarColumn december schrijven <code>[6/6]</code></a></li>
+<li><a href="#org544dd3b">2.2. <span class="todo PROGRESS">PROGRESS</span> File met eenvoudige voorbeelden toevoegen <code>[5/6]</code></a>
+<ul>
+<li><a href="#org937d34a">2.2.1. <span class="done DONE">DONE</span> Tekststijl</a></li>
+<li><a href="#org3d35190">2.2.2. <span class="done DONE">DONE</span> Takenlijst en kopjes <code>[33%]</code></a></li>
+<li><a href="#orgda25603">2.2.3. <span class="done DONE">DONE</span> Links</a></li>
+<li><a href="#orgbefdc77">2.2.4. <span class="done DONE">DONE</span> Tabel/spreadsheet</a></li>
+</ul>
+</li>
+<li><a href="#orgbc342c6">2.3. <span class="todo PROGRESS">PROGRESS</span> Meer geavanceerde voorbeelden</a>
+<ul>
+<li><a href="#org735e663">2.3.1. <span class="done DONE">DONE</span> Formule</a></li>
+<li><a href="#orgcd4485d">2.3.2. <span class="todo ACTIVE">ACTIVE</span> Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org09426f9" class="outline-2">
+<h2 id="org09426f9"><span class="section-number-2">1.</span> Toetsaanslagen</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Ik gebruik kleine letter <code>a</code> voor de <code>A</code>-toets.</li>
+<li>Ik gebruik hoofdletters <code>C-</code> voor de <code>Ctrl</code>-toets, <code>M-</code> voor de Alt (meta)-toets en <code>S-</code> voor de
+<code>Shift</code>-toets.
+<ul class="org-ul">
+<li><code>C-c</code> is dus <code>Ctrl-C</code>, <code>C-c C-c</code> is dat tweemaal en <code>C-M-a</code> is gelijktijdig <code>Ctrl</code>, <code>Alt</code> en <code>A</code>
+indrukken.</li>
+</ul></li>
+<li><code>ENTER</code>, <code>TAB</code> en <code>ESC</code> zijn de toetsen die je verwacht.</li>
+<li>Raak je verstrikt?  Druk <code>ESC ESC ESC ESC</code> en je kunt weer typen.</li>
+<li>Zie ook <a href="http://pub.vandersluys.nl/download/GettingStartedWithEmacs.pdf">http://pub.vandersluys.nl/download/GettingStartedWithEmacs.pdf</a> (met name sectie 1.2 en het begin
+van 1.3)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org058caf3" class="outline-2">
+<h2 id="org058caf3"><span class="section-number-2">2.</span> <span class="todo TODO">TODO</span> Te doen <code>[1/3]</code></h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org13c5636" class="outline-3">
+<h3 id="org13c5636"><span class="section-number-3">2.1.</span> <span class="done DONE">DONE</span> MarColumn december schrijven <code>[6/6]</code></h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li class="on"><code>[X]</code> klokken taken, projecten</li>
+<li class="on"><code>[X]</code> agenda, plannen, takenlijsten (TODO/DONE, OPEN/CLOSED), ideeenlijsten</li>
+<li class="on"><code>[X]</code> (interne) links</li>
+<li class="on"><code>[X]</code> tabellen, simpele spreadsheets</li>
+<li class="on"><code>[X]</code> export, publish: plain text, html, md, LaTeX/PDF, odt, rST, &#x2026;</li>
+<li class="on"><code>[X]</code> code, formules</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org544dd3b" class="outline-3">
+<h3 id="org544dd3b"><span class="section-number-3">2.2.</span> <span class="todo PROGRESS">PROGRESS</span> File met eenvoudige voorbeelden toevoegen <code>[5/6]</code></h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org937d34a" class="outline-4">
+<h4 id="org937d34a"><span class="section-number-4">2.2.1.</span> <span class="done DONE">DONE</span> Tekststijl</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li><b>vet</b></li>
+<li><i>cursief</i></li>
+<li><span class="underline">onderlijnd</span></li>
+<li><del>doorgehaald</del></li>
+<li><code>code</code> of <code>vebatim</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3d35190" class="outline-4">
+<h4 id="org3d35190"><span class="section-number-4">2.2.2.</span> <span class="done DONE">DONE</span> Takenlijst en kopjes <code>[33%]</code></h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Zie <a href="#org058caf3">2</a></li>
+<li class="on"><code>[X]</code> inspringen:
+<ul class="org-ul">
+<li>zet de cursor op een item (b.v. in deze lijst) en typ <code>Alt-pijl rechts/links</code></li>
+<li>hetzelfde voor kopjes</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> slepen:
+<ul class="org-ul">
+<li>zet de cursor op een item en typ <code>Alt-pijl op/neer</code></li>
+<li>op/neer wisselt voor een item (met dezelfde indentatie en indien mogelijk)</li>
+<li>hetzelfde voor kopjes (van hetzelfde level)</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> lijstsymbool veranderen:
+<ul class="org-ul">
+<li>zet de cursor op een item en typ <code>Shift rechts/links</code></li>
+<li>symbolen springen van tussen <code>+/-/*/1./1)</code> (<code>*</code> indien mogelijk)</li>
+</ul></li>
+<li class="on"><code>[X]</code> item aan/uitvinken:
+<ul class="org-ul">
+<li>zet de cursor op het item en typ <code>C-c C-c</code></li>
+<li>het aantal of percentage in het kopje erboven (gemaakt door <code>[/]</code> of <code>[%]</code> te typen) verandert mee</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> TODO veranderen:
+<ul class="org-ul">
+<li>zet de cursor op een kopje en typ <code>Shift rechts/links</code></li>
+<li>als alle subkopjes DONE zijn, wordt het hogere kopje dat ook (mits er TODO staat)</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Nieuw item:
+<ul class="org-ul">
+<li><code>Alt-ENTER</code></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Nieuw kopje:
+<ul class="org-ul">
+<li><code>Ctrl-ENTER</code></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Nieuwe lijst maken
+<ol class="org-ol">
+<li>Genummerd:
+<ol class="org-ol">
+<li>typ een <code>1.</code> of <code>1)</code> gevolgd door een spatie en de omschrijving</li>
+<li>typ <code>Alt-ENTER</code> voor het volgende item (telt automatisch door)</li>
+</ol></li>
+<li>Ongenummerd:
+<ol class="org-ol">
+<li>typ een <code>+</code>, <code>-</code> of (indien subitem) <code>*</code> gevolgd door een spatie en de omschrijving</li>
+<li>typ <code>Alt-ENTER</code> voor het volgende item met hetzelfde symbool</li>
+</ol></li>
+<li>Definitie:
+<dl class="org-dl">
+<dt>Definitie</dt><dd>een definitie is een <b>ongenummerd</b> item met een keyword, gevolgd door een dubbele dubbele
+punt (<code>::</code>) en de definitie.</dd>
+<dt>(no term)</dt><dd><code>Alt-ENTER</code> vraagt om de volgende definitie met hetzelfde symbool</dd>
+</dl></li>
+<li>Vink (<i>radio button</i>):
+<ol class="org-ol">
+<li>typ een item symbool of nummer, gevolgd door een spatie, <code>[ ]</code>, weer een spatie en de omschrijving</li>
+<li>de <code>[ ]</code> licht op ten teken dat de <i>radio button</i> actief is</li>
+<li><code>Alt-ENTER</code> geeft een nieuw item, maar <b>geen</b> lege radio button (bug?)</li>
+<li><code>C-c C-c</code> op de regel switcht tussen <code>[ ]</code> en <code>[X]</code></li>
+</ol></li>
+</ol></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgda25603" class="outline-4">
+<h4 id="orgda25603"><span class="section-number-4">2.2.3.</span> <span class="done DONE">DONE</span> Links</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<ul class="org-ul">
+<li>Interne link: zie <a href="#org058caf3">2</a></li>
+<li>Externe link: <a href="https://github.com/MarcvdSluys/NLLGG-docs">https://github.com/MarcvdSluys/NLLGG-docs</a></li>
+<li>Externe link met onschrijving: <a href="https://github.com/MarcvdSluys/NLLGG-docs">NLLGG docs</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbefdc77" class="outline-4">
+<h4 id="orgbefdc77"><span class="section-number-4">2.2.4.</span> <span class="done DONE">DONE</span> Tabel/spreadsheet</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<ol class="org-ol">
+<li>typ <code>|- TAB</code> voor een horizontale lijn</li>
+<li>typ <code>x|x^2|x^3 TAB</code> in de nieuwe regel voor de header</li>
+<li>typ <code>-</code> rechts tegen de <code>|</code> voor nog een lijn</li>
+<li>in de linker kolom, typ <code>1 ENTER 2 ENTER</code> etc.</li>
+<li>onder x<sup>2</sup>, typ <code>=$1**2 TAB</code>.  <code>$1</code> staat voor kolom 1.</li>
+<li>onder x<sup>3</sup>, typ <code>=$1**3 TAB</code></li>
+<li>ga naar de regel met <code>TBLFM</code> (tabelformule) onder de tabel en typ <code>C-c C-c</code></li>
+</ol>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">x</th>
+<th scope="col" class="org-right">x<sup>2</sup></th>
+<th scope="col" class="org-right">x<sup>3</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+<td class="org-right">8</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">9</td>
+<td class="org-right">27</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">16</td>
+<td class="org-right">64</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">25</td>
+<td class="org-right">125</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbc342c6" class="outline-3">
+<h3 id="orgbc342c6"><span class="section-number-3">2.3.</span> <span class="todo PROGRESS">PROGRESS</span> Meer geavanceerde voorbeelden</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org735e663" class="outline-4">
+<h4 id="org735e663"><span class="section-number-4">2.3.1.</span> <span class="done DONE">DONE</span> Formule</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+LaTeX moet geinstalleerd zijn&#x2026;
+</p>
+
+<ol class="org-ol">
+<li>inline: typ <code>$\int_0^\infty \frac{\sin x}{x} dx$</code> en druk <code>C-c C-x C-l</code>
+Dit is een mooie formule \(\int_0^\infty \frac{\sin x}{x} dx\), maar wel ingewikkeld.</li>
+
+<li>tussen de tekst: typ <code>\[\int_0^\infty \frac{\sin x}{x} dx\]</code> en druk <code>C-c C-x C-l</code>
+\[\int_0^\infty \frac{\sin x}{x} dx\]</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgcd4485d" class="outline-4">
+<h4 id="orgcd4485d"><span class="section-number-4">2.3.2.</span> <span class="todo ACTIVE">ACTIVE</span> Code</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>Elisp werkt altijd?</li>
+</ul>
+</div>
+
+<ol class="org-ol">
+<li><a id="org606f6a9"></a>Elisp (emacs lisp script)<br />
+<div class="outline-text-5" id="text-2-3-2-1">
+<ol class="org-ol">
+<li>Typ <code>C-c C-, s</code> voor een <code>#+begin/end_src</code>-block en voeg zelf <code>elisp</code> toe</li>
+<li>Typ wat code en return een waarde</li>
+<li>In het codeblok, typ <code>C-c C-c</code> en beantwoord de vraag onderin met <code>yes ENTER</code></li>
+<li>Het resultaat verschijnt in een <code>RESULTS</code>-blok onder de code.</li>
+</ol>
+<div class="org-src-container">
+<pre class="src src-elisp">(concat  (emacs-version)
+         <span style="color: #ffa07a;">"\nOrgmode "</span> (org-version))  
+</pre>
+</div>
+
+<pre class="example">
+GNU Emacs 27.2 (build 1, x86_64-pc-linux-gnu, GTK+ Version 3.24.29, cairo version 1.16.0)
+ of 2021-10-01
+Orgmode N/A
+</pre>
+</div>
+</li>
+
+<li><a id="org79b7063"></a>Bash<br />
+<div class="outline-text-5" id="text-2-3-2-2">
+<p>
+Bash moet geinstalleerd zijn en Babel moet geactiveerd zijn voor Bash&#x2026;
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #b0c4de;">echo</span> <span style="color: #ffa07a;">"Mijn homedirectory is $HOME"</span>
+</pre>
+</div>
+
+<pre class="example">
+Mijn homedirectory is /home/sluys
+</pre>
+</div>
+</li>
+
+<li><a id="orgb8fa62f"></a>Python<br />
+<div class="outline-text-5" id="text-2-3-2-3">
+<p>
+Python moet geinstalleerd zijn en Babel moet geactiveerd zijn voor Python&#x2026;
+</p>
+
+<ol class="org-ol">
+<li>Typ <code>C-c C-, s</code> voor een <code>#+begin/end_src</code>-block en voeg zelf <code>python</code> toe</li>
+<li>Typ wat code en return een waarde</li>
+<li>In het codeblok, typ <code>C-c C-c</code> en beantwoord de vraag onderin met <code>yes ENTER</code></li>
+<li>De returnwaarde verschijnt onder de code in</li>
+</ol>
+<div class="org-src-container">
+<pre class="src src-python" id="orgf2a1cc4"><span style="color: #eedd82;">x</span>=3
+<span style="color: #eedd82;">y</span>=4
+<span style="color: #eedd82;">z</span>=x*y
+<span style="color: #00ffff;">return</span> z
+</pre>
+</div>
+
+<pre class="example">
+12
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #00ffff;">import</span> numpy <span style="color: #00ffff;">as</span> np
+<span style="color: #00ffff;">import</span> matplotlib.pyplot <span style="color: #00ffff;">as</span> plt
+<span style="color: #eedd82;">x</span> = np.linspace(-15,15)
+plt.plot(x, np.sin(x)/x)
+plt.savefig(<span style="color: #ffa07a;">'Orgmode_voorbeeld.png'</span>)
+<span style="color: #00ffff;">return</span> <span style="color: #ffa07a;">'Orgmode_voorbeeld.png'</span>  <span style="color: #ff7f24;"># </span><span style="color: #ff7f24;">Return filename to orgmode</span>
+</pre>
+</div>
+
+
+<div id="orgb1f5e5b" class="figure">
+<p><img src="Orgmode_voorbeeld.png" alt="Orgmode_voorbeeld.png" />
+</p>
+</div>
+</div>
+</li>
+
+<li><a id="org534b384"></a>Python + Bash<br />
+<div class="outline-text-5" id="text-2-3-2-4">
+<ul class="org-ul">
+<li>Hier gejat: <a href="https://jherrlin.github.io/posts/emacs-orgmode-source-code-blocks/">https://jherrlin.github.io/posts/emacs-orgmode-source-code-blocks/</a></li>
+</ul>
+
+<p>
+Print een lijst met .org files van dit jaar in de huidige directory in bash.  Ik wil zowel (<code>both</code>) de code
+als het resultaat exporteren (naar bijvoorbeeld .md of .pdf).  En ik geef de code een naam (<code>ls</code>) zodat de
+output hieronder gebruikt kan worden:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash" id="org0d6ae24">ls -l 2021-*.org | grep -v Orgmode_voorbeeld
+</pre>
+</div>
+
+<pre class="example">
+-rw-r--r-- 1 sluys sluys 2873 Jan 17  2021 2021-01__FOSSvsCommercieel.org
+-rw-r--r-- 1 sluys sluys 4069 Apr 19  2021 2021-04__GentooLinux.org
+-rw-r--r-- 1 sluys sluys 3973 Jun 13 10:57 2021-07__Ongedierte.org
+-rw-r--r-- 1 sluys sluys 4908 Jul 25 16:24 2021-08__FOSSopScholen.org
+-rw-r--r-- 1 sluys sluys 5063 Nov  5 09:39 2021-10__TheWinMacLinuxExperience_published.org
+-rw-r--r-- 1 sluys sluys 4755 Dec  6 13:23 2021-12__Orgmode.org
+</pre>
+
+
+<p>
+Gebruik awk om de filename en grootte te nemen en maak een tabel:
+</p>
+<div class="org-src-container">
+<pre class="src src-awk" id="orgb9c2d22"><span style="color: #00ffff;">BEGIN</span> { <span style="color: #eedd82;">OFS</span>=<span style="color: #ffa07a;">"|"</span> }; { <span style="color: #b0c4de;">print</span> $9, $5}
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">2021-01_<sub>FOSSvsCommercieel.org</sub></td>
+<td class="org-right">2873</td>
+</tr>
+
+<tr>
+<td class="org-left">2021-04_<sub>GentooLinux.org</sub></td>
+<td class="org-right">4069</td>
+</tr>
+
+<tr>
+<td class="org-left">2021-07_<sub>Ongedierte.org</sub></td>
+<td class="org-right">3973</td>
+</tr>
+
+<tr>
+<td class="org-left">2021-08_<sub>FOSSopScholen.org</sub></td>
+<td class="org-right">4908</td>
+</tr>
+
+<tr>
+<td class="org-left">2021-10_<sub>TheWinMacLinuxExperience</sub><sub>published.org</sub></td>
+<td class="org-right">5063</td>
+</tr>
+
+<tr>
+<td class="org-left">2021-12_<sub>Orgmode.org</sub></td>
+<td class="org-right">4755</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Gebruik Python om o.a. de kleinste en grootste file te vinden:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #00ffff;">print</span>(table[0])                      <span style="color: #ff7f24;"># </span><span style="color: #ff7f24;">Eerste rij van de tabel zoals ingelezen</span>
+<span style="color: #00ffff;">print</span>(<span style="color: #ffa07a;">"Aantal columns: %i"</span> % <span style="color: #b0c4de;">len</span>(table))
+<span style="color: #00ffff;">print</span>(<span style="color: #ffa07a;">"Kortste column: %s (%i b)"</span> % <span style="color: #b0c4de;">tuple</span>(<span style="color: #b0c4de;">min</span>(table)))
+<span style="color: #00ffff;">print</span>(<span style="color: #ffa07a;">"Langste column: %s (%i b)"</span> % <span style="color: #b0c4de;">tuple</span>(<span style="color: #b0c4de;">max</span>(table)))
+<span style="color: #00ffff;">print</span>(<span style="color: #ffa07a;">"Totale grootte: %0.3f kb"</span>  % (<span style="color: #b0c4de;">sum</span>([x <span style="color: #00ffff;">for</span> y,x <span style="color: #00ffff;">in</span> table]) / 1000))
+</pre>
+</div>
+
+<pre class="example">
+['2021-01__FOSSvsCommercieel.org', 2873]
+Aantal columns: 6
+Kortste column: 2021-01__FOSSvsCommercieel.org (2873 b)
+Langste column: 2021-12__Orgmode.org (4755 b)
+Totale grootte: 25.641 kb
+</pre>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Marc van der Sluys</p>
+<p class="date">Created: 2021-12-12 Sun 11:08</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
