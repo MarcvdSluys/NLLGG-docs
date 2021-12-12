@@ -114,7 +114,7 @@ LaTeX moet geinstalleerd zijn...
   
 **** Elisp (emacs lisp script)
 1. Typ ~C-c C-, s~ voor een ~#+begin/end_src~-block en voeg zelf ~elisp~ toe
-2. Typ wat code en return een waarde
+2. Typ wat code in en return een waarde (zie voorbeeld hieronder)
 3. In het codeblok, typ ~C-c C-c~ en beantwoord de vraag onderin met ~yes ENTER~
 4. Het resultaat verschijnt in een ~RESULTS~-blok onder de code.
 #+BEGIN_SRC elisp :exports both

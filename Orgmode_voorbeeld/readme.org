@@ -1,5 +1,30 @@
 * Orgmode voorbeeld
 
-Voorbeeld van een Orgmode file (~.org~), met exports naar PDF (.pdf) en Markdown (.md).
+Voorbeeld van een Orgmode file met exports en instellingen voor emacs.
+
+** Bronbestand
+
+Het bronbestand is de Orgmode file (~.org~)
+
+
+** Exports
+
+Er zijn geexporteerde files: HTML, Markdown (~.md~), ODT, PDF, reStructured Text (~.rst~), ascii en UTF-8
+(beide ~.txt~).
+
+
+*** HTML bekijken
+
+De html-file wordt in GitHub getoond als broncode, maar kan via [[https://htmlpreview.github.io/?https://github.com/MarcvdSluys/NLLGG-docs/blob/master/Orgmode_voorbeeld/Orgmode_voorbeeld.html][deze link]] in de browser opgemaakt worden
+weergegeven.
+
+
+** Instellingen voor emacs
+
+Instellingen voor emacs staan normaal gesproken in =~/.emacs.d/init.el= (of =~/.emacs=).  Mijn instellingen
+voor Orgmode zijn te vinden in ~init.el~.  Je kunt hiermee experimenteren door ze een voor een toe te voegen
+en kijken wat er gebeurt, of alles toevoegen en uitcommenteren (~;;~) wat niet werkt.  Waarschijnlijk werkt
+niet alles in een keer, doordat voor sommige opties externe software (b.v. emacs-packages) nodig is, en ik te
+lui was dit uit te zoeken.  Wel heb ik geprobeerd de commentaarregels wat duidelijker te maken.
 
 
