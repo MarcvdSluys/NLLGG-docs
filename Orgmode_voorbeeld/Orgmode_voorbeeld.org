@@ -8,7 +8,7 @@
    + ~C-c~ is dus ~Ctrl-C~, ~C-c C-c~ is dat tweemaal en ~C-M-a~ is gelijktijdig ~Ctrl~, ~Alt~ en ~A~
      indrukken.
 3. ~ENTER~, ~TAB~ en ~ESC~ zijn de toetsen die je verwacht.
-4. Raak je verstrikt?  Druk ~ESC ESC ESC ESC~ en je kunt weer typen.
+4. Raak je verstrikt?  Druk ~ESC ESC ESC~ en je kunt weer typen.
 5. Zie ook http://pub.vandersluys.nl/download/GettingStartedWithEmacs.pdf (met name sectie 1.2 en het begin
    van 1.3)
 
@@ -75,7 +75,7 @@ CLOSED: [2021-12-05 Sun 10:52]
 CLOSED: [2021-12-05 Sun 10:53]
 + Interne link: zie [[Te doen]]
 + Externe link: https://github.com/MarcvdSluys/NLLGG-docs
-+ Externe link met onschrijving: [[https://github.com/MarcvdSluys/NLLGG-docs][NLLGG docs]]
++ Externe link met omschrijving: [[https://github.com/MarcvdSluys/NLLGG-docs][NLLGG docs]]
 
 *** DONE Tabel/spreadsheet
 CLOSED: [2021-12-05 Sun 11:40]
@@ -101,12 +101,15 @@ CLOSED: [2021-12-05 Sun 11:40]
 ** PROGRESS Meer geavanceerde voorbeelden
 *** DONE Formule
 CLOSED: [2021-12-05 Sun 11:42]
-LaTeX moet geinstalleerd zijn...
+LaTeX moet geinstalleerd zijn om formules weer te geven in emacs.
 
-1. inline: typ ~$\int_0^\infty \frac{\sin x}{x} dx$~ en druk ~C-c C-x C-l~
+1. \LaTeX-symbolen zonder opmaak worden fraai geexporteerd naar \LaTeX, zoals \int, \infty and \nabla_\phi.
+
+2. inline: typ ~$\int_0^\infty \frac{\sin x}{x} dx$~ en druk ~C-c C-x C-l~ om het weer te geven in emacs.
   Dit is een mooie formule $\int_0^\infty \frac{\sin x}{x} dx$, maar wel ingewikkeld.
    
-2. tussen de tekst: typ ~\[\int_0^\infty \frac{\sin x}{x} dx\]~ en druk ~C-c C-x C-l~
+3. tussen de tekst: typ ~\[\int_0^\infty \frac{\sin x}{x} dx\]~ en druk ~C-c C-x C-l~ om het weer te geven in
+   emacs.
    \[\int_0^\infty \frac{\sin x}{x} dx\]
    
 *** ACTIVE Code
