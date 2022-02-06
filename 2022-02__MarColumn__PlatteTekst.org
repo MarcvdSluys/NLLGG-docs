@@ -1,0 +1,61 @@
+#+title: MarColumn: Platte tekst
+
+Ik had al aangekondigd iets te willen schrijven over platte tekst[fn:1].  De reden is dat de open natuur van
+Linuxsystemen en van andere open-sourcesoftware voor een groot deel te danken is aan platte tekst.  Dit
+formaat is namelijk leesbaar voor zowel mens als machine.  Dit is in tegenstelling tot /binair formaat/, dat
+in principe alleen gelezen kan worden door een computer, en dan nog alleen als bekend is welke codering is
+gebruikt.  Het is hierdoor in principe altijd mogelijk om een (onbeschadigd) onbekend tekstbestand te
+inspecteren en eventueel code te ontwikkelen om het in te lezen.  Daarnaast is het mogelijk om een tekst te
+lezen waarvan éZn karakter misvormd is en de tekst toch grotendeels of geheel te begrijpen, terwijl bij een
+binair bestand mogelijk alle inhoud verloren is wanneer er éZn byte scheef staat.[fn:2] Een oud bestand in
+binair formaat geproduceerd door een niet langer bestand programma is bijna altijd onleesbaar en dus de inhoud
+verloren.  Ook kan de codering van een binair bestand afhangen van de gebruikte processor, waardoor het
+lastiger overgezet kan worden naar een ander systeem (slechte portabiliteit).  Een belangrijk voordeel van
+platte tekst is dus dat het toegankelijk is, zelfs na jaren of decennia en misschien wel eeuwen of millennia.
+
+De configuratie van een GNU/Linuxsysteem is grotendeels te vinden in de directory ~/etc/~.  Die bestaat, naast
+subdirectories, uit een groot aantal tekstbestanden.[fn:3] Zo bevat mijn file ~/etc/papersize~ de tekst "a4"
+en ~/etc/timezone~ "Europe/Amsterdam".  Dit zijn weliswaar simpele voorbeeldjes, maar als ik morgen naar New
+York verhuis kan ik gokken hoe ik deze bestanden moet aanpassen.  Een complexer voorbeeld is het bestand
+~/usr/src/linux/.config~, waar in 5293 regels de configuratie van mijn Linuxkernel wordt bepaald.  Deze
+bestanden zijn over 20, 50 of 100 jaar mogelijk niet meer direct bruikbaar, maar ook dan is (met meer of
+minder moeite) te achterhalen wat de bedoeling was en kan die betekenis indien gewenst worden overgezet naar
+een nieuw systeem.
+
+Ook open-source software is (per definitie) afhankelijk van platte tekst.  Broncode wordt immers vrijwel
+altijd geschreven in tekstbestanden zonder opmaak.  Het nadeel hiervan is dat een processor dit niet direct
+kan gebruiken.  Om die reden bestaan er /compilers/, die broncode omzetten in binaire code die door de CPU kan
+worden gebruikt.  Door de broncode te delen kan een programma of bibliotheek in theorie voor iedere computer
+worden gecompileerd.  Programma's als Python kennen geen compiler, wat ze gebruikersvriendelijker maakt, maar
+ook 100-200 keer langzamer dan b.v. C of Fortran.[fn:4] Het mooie van broncode is dat iedere gebruiker haar
+eigen favoriete teksteditor kan gebruiken; het resultaat hangt daar niet van af.  Probeer dat maar eens met
+een Officebestand.
+
+Ook voor (het delen van) data gebruik ik graag platte tekst.  Data in een ~.csv~ file zijn te lezen met
+Fortran, Python en LibreOffice, maar ook snel te inspecteren in de terminal met ~less~.[fn:5] Mocht ik geen
+programma hebben om de data te lezen, dan kan ik deze bekijken en gemakkelijk wat schrijven.  Het zal u niet
+verbazen dat deze column wordt geschreven in platte tekst (en vervolgens geëxporteerd), maar ook bijvoorbeeld
+HTML, waarin webpagina's worden geschreven, bestaat uit platte tekst (met nog meer platte tekst om de opmaak
+te regelen).
+
+Er is slechts één voordeel van binaire files.  Dat heet /vendor lock-in/ en betekent dat als u een proprietair
+programma gebruikt dat uw data wegschrijft in een zelfverzonnen binair formaat, het lastig tot onmogelijk is
+om over te stappen op een ander programma.  Dat is echter alleen een voordeel voor de verkoper van de
+software, niet voor u als gebruiker...
+
+
+* Footnotes
+
+[fn:1] Platte tekst (/plain text/) bestaat uit ASCII, eventueel uitgebreid met exotischer tekens (zoals
+Unicode, met b.v. geaccenteerde letters).
+
+[fn:2] Een deel van mijn oude emails ben ik kwijt doordat ze in één binair bestand per mailbox zaten.  Momenteel
+gebruik ik het maildir format: één tekstbestand per email.
+
+[fn:3] In mijn systeem circa 2500.
+
+[fn:4] Maar nog altijd honderden keren sneller dan MS Excel.
+
+[fn:5] Zeker als de data in nette kolommen staan.  Het voordeel van ~less~ is dat niet het hele bestand hoeft
+te worden geopend om de eerste regels te zien en dat ik niet hoef te wachten tot een of ander zwaar grafisch
+venster eindelijk is geopend.
