@@ -1,0 +1,44 @@
+#+title: MarColumn: Wetenschap en FOSS
+
+Ik ben een wetenschapper en een groot fan van de wetenschappelijke methode.[fn:: Een van de redenen is dat we
+zonder wetenschap momenteel opgewonden zouden raken van StoneTools^TM v100000.0.]  Ook ben ik
+FOSS-gebruiker en bejubelaar van vrije open-source software.  Naar mijn mening is het tweede een logisch
+gevolg van het eerste.
+
+Immers, de wetenschap behoort eerlijk, correct, onafhankelijk, open en transparant te zijn.  Die laatste drie
+zijn noodzakelijk voor de eerste twee.  Wetenschappers doen onderzoek en publiceren hun methode en resultaten.
+Maar misschien ben ik wel een oplichter en belazer ik de boel.  Of ik ben te goeder trouw, maar maak een fout.
+In beide gevallen moet dat te achterhalen zijn door anderen die het gevoel hebben dat er iets niet klopt aan
+mijn resultaten.  Om dat te doen moet wetenschappelijk onderzoek /reproduceerbaar/ zijn; als een ander hetzelfde
+experiment of dezelfde analyse doet, moet er hetzelfde uitkomen.  En daarvoor is het noodzakelijk dat de data
+en analysemethode openbaar zijn.
+
+Veel onderzoeksprojecten beginnen zelfs met het reproduceren van eerdere resultaten, om vervolgens iets aan te
+passen aan de hand van nieuwe of betere inzichten.  Natuurlijk kan ik een commercieel, closed-sourceprogramma
+gebruiken voor mijn data-analyse.  Maar dan stuit ik op een aantal problemen.  Wat als dit pakket de methode
+van een ander niet kan reproduceren?  Dan zal ik mijn eigen software moeten schrijven die dat /wel/ kan.  En
+natuurlijk wil ik checken dat het programma doet wat het belooft.  Net als wetenschappers kunnen ook
+commerciële software-ontwikkelaars fouten maken, en daarvan mag de uitkomst niet afhangen.  Maar ik kan niet
+in de broncode kijken.  Dan zit er dus niets anders op dan zelf een versie van het programma te schrijven en
+te kijken of daar hetzelfde uitkomt.  Maar als ik dat /toch/ al moet doen, hoef ik de software niet te kopen.
+Een laatste optie is de leverancier op haar bolle ogen geloven, mijn vingers kruisen en haar pakket gebruiken
+als een black box.[fn:: Een alternatief is beperkt testen, maar dan weet ik alleen dat het programma in die
+beperkte gevallen het (in)correcte antwoord geeft.]  Los van het feit dat ik dan een dubieuze wetenschapper
+ben, komt de reproduceerbaarheid van mijn werk in gevaar.  Wat als een ander vijf jaar later mijn werk wil
+overdoen, maar de leverancier is failliet, die specifieke versie is niet meer beschikbaar, de firma weigert
+het te verkopen of die wetenschapper kan het pakket niet betalen?  Voor de transparantie had ik beter een
+open-sourcepakket kunnen gebruiken of zelf een code kunnen schrijven en publiceren.
+
+Een ander contrast tussen commercie en wetenschap is de marketing.  Als ik code schrijf voor data-analyse,
+schrijf ik alleen het noodzakelijke.  Bij de aanschaf van een softwarepakket is de kans groot dat het veel
+uitgebreider is dan dat, en dat ik maar 10% van de functionaliteit nodig heb.  Dan is 90% van het geld
+weggegooid.  En mogelijk heeft het programma een grafische gebruikersinterface (GUI), dat verkoopt beter.
+Mijn ervaring is dat minstens 90% van de code van zo'n programma in de GUI gaat zitten en hooguit 10% in de
+functionaliteit.[fn:: Veel van de computers waarop mijn software draait /hebben/ helemaal geen grafische
+omgeving, dus een GUI-programma zou negen keer teveel werk zijn /en/ niet werken.]  Dan is al 99% van het geld
+verkwist.  En mocht het programma allerlei toeters en bellen hebben die veel gebruikers geinig vinden maar
+niets toevoegen,[fn:: Iemand behoefte aan een pratende paperclip?] geld steken in reclame of zelfs
+aandeelhouders hebben waar de winst naartoe moet, dan is minder dan 1% van de aanschafprijs nuttig
+geïnvesteerd.  En dat is een probleem, want onafhankelijk wetenschappelijk onderzoek wordt gefinancierd door
+de belastingbetaler.  En er zijn weinig burgers die vinden dat de belastingen best een factor 100 omhoog
+kunnen.
